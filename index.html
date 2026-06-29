@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Solutions — AI Phone Agents, Smart Security &amp; Automation for Business</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><g stroke='%231E8E6E' stroke-width='5' stroke-linecap='round'><line x1='40' y1='40' x2='20' y2='20'/><line x1='40' y1='40' x2='62' y2='16'/><line x1='40' y1='40' x2='64' y2='62'/><line x1='40' y1='40' x2='22' y2='60'/></g><circle cx='20' cy='20' r='8' fill='%231E8E6E'/><circle cx='62' cy='16' r='8' fill='%231E8E6E'/><circle cx='64' cy='62' r='8' fill='%231E8E6E'/><circle cx='22' cy='60' r='8' fill='%231E8E6E'/><circle cx='40' cy='40' r='9' fill='%23C9743E'/></svg>">
+<meta name="theme-color" content="#1E8E6E">
+<meta property="og:title" content="Tech Solutions — AI Phone Agents, Smart Security &amp; Automation">
+<meta property="og:description" content="Luna answers every call 24/7, books appointments, and captures every lead. AI phone agents, smart security, and automation for local businesses.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Luna answers every call 24/7, books appointments, and captures every lead. Tech Solutions builds AI phone agents, smart security, and workflow automation for local businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-alt:#F3F6F4;
+    --bg-dark:#10201B;
+    --ink:#16211D;
+    --ink-soft:#566059;
+    --line:#E3E8E5;
+    --accent:#1E8E6E;
+    --accent-dark:#157056;
+    --accent-soft:#E8F3EF;
+    --clay:#C9743E;
+  }
+  html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;position:relative;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fm=jpg&q=80&w=2200&auto=format&fit=crop');
+    background-size:cover;background-position:center;opacity:0.12;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:linear-gradient(rgba(243,246,244,0.45),rgba(243,246,244,0.66));
+  }
+  h1,h2,h3{font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:-0.01em;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 32px;}
+  .eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;font-family:'JetBrains Mono',monospace;}
+  .btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:6px;font-size:15px;font-weight:600;display:inline-block;transition:background .15s,transform .15s,box-shadow .15s;box-shadow:0 4px 14px -6px rgba(30,142,110,0.5);}
+  .btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(30,142,110,0.62);}
+  .btn-ghost{border:2px solid var(--accent);color:var(--accent);padding:13px 28px;border-radius:6px;font-size:15px;font-weight:600;display:inline-block;transition:background .15s,color .15s,transform .15s;}
+  .btn-ghost:hover{background:var(--accent);color:#fff;transform:translateY(-2px);}
+  .btn-secondary{border:1px solid var(--line);padding:14px 28px;border-radius:6px;font-size:15px;font-weight:600;display:inline-block;color:var(--ink);transition:border-color .15s;}
+  .btn-secondary:hover{border-color:var(--ink);}
+
+  /* ── Header ──────────────────────────────────────────────────────────── */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .logo{font-size:19px;font-weight:600;display:flex;align-items:center;gap:10px;font-family:'Source Serif 4',serif;}
+  .logo-mark{flex:none;}
+  nav{display:flex;gap:34px;}
+  nav a{font-size:15px;color:var(--ink-soft);font-weight:500;transition:color .15s;}
+  nav a:hover,nav a.active{color:var(--accent);}
+  .nav-cta{background:var(--accent);color:#fff;padding:10px 20px;border-radius:6px;font-size:14px;font-weight:600;}
+  .nav-cta:hover{background:var(--accent-dark);color:#fff;}
+
+  /* ── Hamburger ───────────────────────────────────────────────────────── */
+  .nav-toggle{
+    display:none;background:none;border:none;cursor:pointer;
+    padding:8px;color:var(--ink);border-radius:6px;transition:background .15s;
+  }
+  .nav-toggle:hover{background:var(--bg-alt);}
+  .nav-toggle svg{display:block;}
+  .nav-toggle .bar{transition:transform .2s,opacity .2s,y .2s;}
+
+  /* ── Hero ────────────────────────────────────────────────────────────── */
+  .hero{position:relative;overflow:hidden;background:#0D1210;padding:112px 0 96px;}
+  .hero::before{content:"";position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fm=jpg&q=80&w=2000&auto=format&fit=crop');background-size:cover;background-position:center;opacity:0.42;}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(720px 400px at 80% 28%,rgba(30,142,110,0.30),transparent 68%),linear-gradient(105deg,rgba(13,18,16,0.94) 32%,rgba(13,18,16,0.5));}
+  .hero .wrap{position:relative;z-index:1;}
+  .hero .eyebrow{color:#5FCDA9;}
+  h1.headline{font-size:52px;line-height:1.06;margin-bottom:22px;font-weight:700;color:#FFFFFF;max-width:800px;}
+  .hero .sub{font-size:19px;color:#C4D0CA;margin-bottom:34px;max-width:580px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.36);}
+  .hero .btn-ghost:hover{background:rgba(255,255,255,0.1);color:#fff;}
+  .hero-trust{margin-top:22px;font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:0.02em;}
+  .hero-trust strong{color:rgba(255,255,255,0.62);}
+
+  /* ── Stat strip ──────────────────────────────────────────────────────── */
+  .stats-strip{background:#091410;padding:56px 0;}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .stat-item .snum{font-family:'Source Serif 4',serif;font-size:46px;font-weight:700;color:var(--accent);display:block;line-height:1;}
+  .stat-item .slbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5A7A6E;text-transform:uppercase;letter-spacing:0.07em;margin-top:10px;display:block;}
+
+  /* ── Trust badges ────────────────────────────────────────────────────── */
+  .trust-badges{border-bottom:1px solid var(--line);background:var(--bg-alt);padding:15px 0;}
+  .badges-wrap{display:flex;align-items:center;gap:36px;flex-wrap:wrap;justify-content:center;}
+  .badge-item{font-size:13px;font-family:'JetBrains Mono',monospace;color:var(--ink-soft);display:flex;align-items:center;gap:8px;font-weight:500;white-space:nowrap;}
+  .badge-ic{width:15px;height:15px;color:var(--accent);flex:none;}
+
+  /* ── Marquee ─────────────────────────────────────────────────────────── */
+  .marquee-section{overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg-alt);padding:13px 0;}
+  .marquee-inner{display:flex;width:max-content;animation:marquee 30s linear infinite;}
+  .marquee-inner span{font-family:'Source Serif 4',serif;font-size:17px;font-weight:600;color:var(--ink);opacity:0.45;white-space:nowrap;padding:0 36px;}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* ── Section basics ──────────────────────────────────────────────────── */
+  section{padding:88px 0;}
+  .section-head{max-width:680px;margin:0 auto 60px;text-align:center;}
+  h2.section-title{font-size:36px;line-height:1.15;}
+  .section-head p{color:var(--ink-soft);margin-top:16px;font-size:18px;}
+
+  /* ── Service bands ───────────────────────────────────────────────────── */
+  .band{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:72px;}
+  .band:last-child{margin-bottom:0;}
+  .band.reverse .band-text{order:2;}
+  .band-img{border-radius:14px;overflow:hidden;aspect-ratio:4/3;background-size:cover;background-position:center;box-shadow:0 24px 50px -28px rgba(16,32,27,0.35);transition:transform .5s ease,box-shadow .5s ease;}
+  .band:hover .band-img{transform:scale(1.02);box-shadow:0 30px 60px -28px rgba(16,32,27,0.45);}
+  .band-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500;margin-bottom:14px;display:block;letter-spacing:0.04em;}
+  .band-text h3{font-size:26px;margin-bottom:14px;}
+  .band-text p{color:var(--ink-soft);font-size:17px;margin-bottom:18px;}
+  .band-link{color:var(--accent);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px;}
+  .band-link:hover{color:var(--accent-dark);}
+
+  /* ── Industry cards ──────────────────────────────────────────────────── */
+  .industries{background:var(--bg-alt);}
+  .industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .industry-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:transform .2s,box-shadow .2s,border-color .2s;cursor:default;}
+  .industry-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px -16px rgba(16,32,27,0.18);border-color:var(--accent);}
+  .ind-icon{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .2s,color .2s,transform .2s;}
+  .ind-icon svg{width:23px;height:23px;}
+  .industry-card:hover .ind-icon{background:var(--accent);color:#fff;transform:scale(1.05);}
+  .industry-card h4{font-family:'Source Serif 4',serif;font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink);}
+  .industry-card p{color:var(--ink-soft);font-size:15px;line-height:1.6;}
+
+  /* ── Luna feature ────────────────────────────────────────────────────── */
+  .feature{background:rgba(243,246,244,0.72);}
+  .feature .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .feature .badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:var(--accent-soft);padding:6px 14px;border-radius:20px;margin-bottom:18px;font-weight:500;}
+  .feature h2{font-size:34px;line-height:1.15;margin-bottom:16px;}
+  .feature p{color:var(--ink-soft);font-size:17px;margin-bottom:14px;}
+  .stat-row{display:flex;gap:36px;margin-top:26px;}
+  .stat .big{font-family:'Source Serif 4',serif;font-size:34px;color:var(--accent);display:block;font-weight:700;}
+  .stat .lbl{font-size:13px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+  .chat-demo{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 30px 60px -34px rgba(16,32,27,0.35);}
+  .chat-demo .bar{display:flex;align-items:center;gap:8px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+  .chat-demo .bar .d{width:9px;height:9px;border-radius:50%;background:var(--line);}
+  .chat-demo .bar .t{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);margin-left:6px;}
+  .bubble{padding:11px 15px;border-radius:13px;margin-bottom:12px;font-size:14.5px;max-width:84%;}
+  .bubble.them{background:var(--bg-alt);border-bottom-left-radius:3px;}
+  .bubble.ai{background:var(--accent-soft);color:var(--ink);margin-left:auto;border-bottom-right-radius:3px;}
+  .bubble .who{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-soft);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em;}
+
+  /* ── Comparison table ────────────────────────────────────────────────── */
+  .comparison-section{background:var(--bg);}
+  .comp-wrap{overflow-x:auto;}
+  .comp-table{width:100%;border-collapse:collapse;font-size:16px;min-width:560px;}
+  .comp-table th{padding:15px 22px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+  .comp-table th.col-feat{color:var(--ink-soft);}
+  .comp-table th.col-human{color:var(--ink-soft);background:#F8FAF9;}
+  .comp-table th.col-luna{background:var(--accent);color:#fff;border-radius:8px 8px 0 0;text-align:center;}
+  .comp-table td{padding:14px 22px;border-top:1px solid var(--line);}
+  .comp-table td.col-feat{font-weight:600;color:var(--ink);}
+  .comp-table td.col-human{color:var(--ink-soft);background:#F8FAF9;}
+  .comp-table td.col-luna{background:var(--accent-soft);font-weight:600;color:var(--ink);text-align:center;}
+  .cmark{color:var(--accent);font-weight:700;margin-right:5px;}
+  .xmark{color:#BCC8C2;margin-right:5px;}
+
+  /* ── Testimonials / proof ────────────────────────────────────────────── */
+  .testimonials{background:var(--bg-alt);}
+  .case-study{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:44px 48px;margin-bottom:28px;box-shadow:0 20px 50px -30px rgba(16,32,27,0.25);}
+  .case-stat{border-right:1px solid var(--line);padding-right:40px;}
+  .case-num{font-family:'Source Serif 4',serif;font-size:58px;font-weight:700;color:var(--accent);line-height:1;display:block;}
+  .case-lbl{display:block;margin-top:12px;font-size:15px;color:var(--ink-soft);line-height:1.5;}
+  .case-quote{font-family:'Source Serif 4',serif;font-size:22px;line-height:1.5;color:var(--ink);font-weight:500;margin-bottom:24px;}
+  .case-attr,.testi-attr{display:flex;align-items:center;gap:13px;}
+  .avatar{width:46px;height:46px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex:none;font-family:'Source Sans 3',sans-serif;}
+  .attr-name{font-weight:600;color:var(--ink);font-size:15px;}
+  .attr-role{font-size:13.5px;color:var(--ink-soft);}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .testi-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;}
+  .stars{display:flex;gap:3px;margin-bottom:16px;color:var(--clay);}
+  .stars svg{width:17px;height:17px;}
+  .testi-card p{color:var(--ink);font-size:15.5px;line-height:1.6;margin-bottom:22px;flex:1;}
+  .testi-attr{margin-top:auto;}
+  .testi-attr .avatar{width:40px;height:40px;font-size:14px;}
+
+  /* ── Dark glow section ───────────────────────────────────────────────── */
+  .dark-glow{
+    background:#091410;
+    clip-path:polygon(0 7%,100% 0%,100% 93%,0% 100%);
+    padding:132px 0;text-align:center;position:relative;overflow:hidden;
+  }
+  .dark-glow::before{
+    content:"";position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);width:700px;height:420px;
+    background:radial-gradient(ellipse at center,rgba(30,142,110,0.32) 0%,transparent 68%);
+    pointer-events:none;
+  }
+  .dark-glow .wrap{position:relative;z-index:1;}
+  .dark-glow .eyebrow{color:#5FCDA9;display:block;margin-bottom:20px;}
+  .dark-glow h2{color:#fff;font-size:40px;line-height:1.12;margin-bottom:16px;max-width:680px;margin-left:auto;margin-right:auto;}
+  .dark-glow .sub{color:#7EA898;font-size:18px;max-width:520px;margin:0 auto 34px;}
+  .dark-glow .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.3);}
+  .dark-glow .btn-ghost:hover{background:rgba(255,255,255,0.1);color:#fff;}
+
+  /* ── Process ─────────────────────────────────────────────────────────── */
+  .process{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  .process-step{border-top:3px solid var(--accent);padding-top:22px;}
+  .process-step .num{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:14px;margin-bottom:12px;display:block;font-weight:500;}
+  .process-step h3{font-size:20px;margin-bottom:10px;}
+  .process-step p{font-size:16px;color:var(--ink-soft);}
+
+  /* ── Contact ─────────────────────────────────────────────────────────── */
+  .contact{background:var(--bg-dark);}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .contact h2{color:#fff;font-size:34px;line-height:1.15;margin-bottom:16px;}
+  .contact .lead{color:#A9B8B1;font-size:18px;}
+  .contact .eyebrow{color:#5FCDA9;}
+  form{display:flex;flex-direction:column;gap:14px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .form-field{display:flex;flex-direction:column;gap:5px;}
+  .form-field label{font-size:12px;font-family:'JetBrains Mono',monospace;color:#7E8E87;letter-spacing:0.04em;text-transform:uppercase;}
+  form input,form textarea,form select{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:8px;padding:14px 16px;color:#fff;font-family:'Source Sans 3',sans-serif;font-size:15px;}
+  form select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237E8E87' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;}
+  form select option{background:#10201B;color:#fff;}
+  form input::placeholder,form textarea::placeholder{color:#7E8E87;}
+  form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--accent);}
+  form textarea{resize:vertical;min-height:110px;}
+  form button[type="submit"]{background:var(--accent);color:#fff;border:none;padding:15px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:background .15s,opacity .15s;display:flex;align-items:center;justify-content:center;gap:8px;}
+  form button[type="submit"]:hover:not(:disabled){background:var(--accent-dark);}
+  form button[type="submit"]:disabled{opacity:0.6;cursor:default;}
+  .form-success{background:rgba(30,142,110,0.15);border:1px solid rgba(30,142,110,0.4);border-radius:8px;padding:24px;text-align:center;display:none;}
+  .form-success svg{color:var(--accent);margin:0 auto 12px;}
+  .form-success h3{color:#fff;font-size:18px;margin-bottom:6px;}
+  .form-success p{color:#A9B8B1;font-size:15px;}
+
+  /* ── Footer ──────────────────────────────────────────────────────────── */
+  footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,0.08);padding:54px 0 36px;}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  footer .logo{color:#fff;margin-bottom:14px;}
+  footer .blurb{color:#8A9A93;font-size:15px;max-width:320px;}
+  .foot-col h4{font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#5FCDA9;margin-bottom:16px;font-weight:500;}
+  .foot-col a{display:block;color:#A9B8B1;font-size:15px;margin-bottom:10px;transition:color .15s;}
+  .foot-col a:hover{color:#fff;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;color:#7E8E87;font-size:13px;}
+
+  /* ── Scroll reveal ───────────────────────────────────────────────────── */
+  @media (prefers-reduced-motion:no-preference){
+    html.reveal-on .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
+    html.reveal-on .reveal.in{opacity:1;transform:none;}
+    html.reveal-on .reveal.d1{transition-delay:.08s;}
+    html.reveal-on .reveal.d2{transition-delay:.16s;}
+    html.reveal-on .reveal.d3{transition-delay:.24s;}
+    html.reveal-on .reveal.d4{transition-delay:.32s;}
+    html.reveal-on .reveal.d5{transition-delay:.40s;}
+  }
+
+  /* ── Responsive ──────────────────────────────────────────────────────── */
+  @media (max-width:860px){
+    .hero .wrap,.feature .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px;}
+    .band{grid-template-columns:1fr;gap:28px;}
+    .band.reverse .band-text{order:0;}
+    h1.headline{font-size:36px;}
+    h2.section-title{font-size:28px;}
+    .dark-glow h2{font-size:28px;}
+    .dark-glow{clip-path:polygon(0 4%,100% 0%,100% 96%,0% 100%);padding:96px 0;}
+    .process{grid-template-columns:1fr;gap:28px;}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:28px;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px;}
+    .industries-grid{grid-template-columns:1fr 1fr;}
+    .case-study{grid-template-columns:1fr;gap:28px;padding:32px 28px;}
+    .case-stat{border-right:none;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:24px;}
+    .testi-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    /* Mobile nav */
+    nav{
+      display:none;flex-direction:column;gap:0;
+      position:absolute;top:74px;left:0;right:0;
+      background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);padding:12px 0;
+    }
+    nav.open{display:flex;}
+    nav a{padding:12px 32px;border-radius:0;}
+    nav a:hover{background:var(--bg-alt);}
+    .nav-toggle{display:flex;}
+    .nav-cta{display:none;}
+  }
+  @media (max-width:540px){
+    .industries-grid{grid-template-columns:1fr;}
+    .badges-wrap{gap:18px;}
+    .stat-item .snum{font-size:36px;}
+    .case-num{font-size:46px;}
+    .case-quote{font-size:19px;}
+    .wrap{padding:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────── -->
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Tech Solutions home">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <g stroke="var(--accent)" stroke-width="4" stroke-linecap="round">
+          <line x1="40" y1="40" x2="20" y2="20"/>
+          <line x1="40" y1="40" x2="62" y2="16"/>
+          <line x1="40" y1="40" x2="64" y2="62"/>
+          <line x1="40" y1="40" x2="22" y2="60"/>
+        </g>
+        <circle cx="20" cy="20" r="7" fill="var(--accent)"/>
+        <circle cx="62" cy="16" r="7" fill="var(--accent)"/>
+        <circle cx="64" cy="62" r="7" fill="var(--accent)"/>
+        <circle cx="22" cy="60" r="7" fill="var(--accent)"/>
+        <circle cx="40" cy="40" r="8.5" fill="var(--clay)"/>
+      </svg>
+      Tech Solutions
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#receptionist">Meet Luna</a>
+      <a href="#process">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="#contact" class="nav-cta">Get a quote</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" id="hamburger-icon">
+          <line class="bar" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="bar" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="bar" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Hero ────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">AI for business — built to actually work</div>
+    <h1 class="headline">Every missed call is a customer you'll never win back.</h1>
+    <p class="sub">Luna answers every call 24/7, books appointments, and captures every lead — while AI security watches your property and automation kills the busywork. Built into your business, not just handed to you.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn-primary">Book a Free Walkthrough</a>
+      <a href="#receptionist" class="btn-ghost">Meet Luna →</a>
+    </div>
+    <p class="hero-trust">Trusted by <strong>200+</strong> local businesses &middot; No contracts &middot; Live in days</p>
+  </div>
+</section>
+
+<!-- ── Stat strip ───────────────────────────────────────────────────────── -->
+<section class="stats-strip" aria-label="Key stats">
+  <div class="wrap stats-grid">
+    <div class="stat-item">
+      <span class="snum">24/7</span>
+      <span class="slbl">Always answering</span>
+    </div>
+    <div class="stat-item">
+      <span class="snum">&lt;2s</span>
+      <span class="slbl">Average pickup time</span>
+    </div>
+    <div class="stat-item">
+      <span class="snum">&infin;</span>
+      <span class="slbl">Calls handled at once</span>
+    </div>
+    <div class="stat-item">
+      <span class="snum">0</span>
+      <span class="slbl">Calls lost to voicemail</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Trust badges ─────────────────────────────────────────────────────── -->
+<div class="trust-badges">
+  <div class="wrap badges-wrap">
+    <div class="badge-item"><svg class="badge-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>No long-term contracts</div>
+    <div class="badge-item"><svg class="badge-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Live in days, not weeks</div>
+    <div class="badge-item"><svg class="badge-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Real human support</div>
+    <div class="badge-item"><svg class="badge-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Encrypted &amp; private</div>
+    <div class="badge-item"><svg class="badge-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; insured</div>
+  </div>
+</div>
+
+<!-- ── Marquee logo strip ───────────────────────────────────────────────── -->
+<div class="marquee-section" aria-label="Technologies we work with">
+  <div class="marquee-inner" aria-hidden="true">
+    <span>AWS</span><span>Microsoft</span><span>Cisco</span><span>Ubiquiti</span>
+    <span>Google Cloud</span><span>Twilio</span><span>HubSpot</span><span>Ring</span>
+    <span>QuickBooks</span><span>Google Workspace</span><span>Microsoft 365</span>
+    <span>AWS</span><span>Microsoft</span><span>Cisco</span><span>Ubiquiti</span>
+    <span>Google Cloud</span><span>Twilio</span><span>HubSpot</span><span>Ring</span>
+    <span>QuickBooks</span><span>Google Workspace</span><span>Microsoft 365</span>
+  </div>
+</div>
+
+<!-- ── Services ─────────────────────────────────────────────────────────── -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Services</div>
+      <h2 class="section-title">Hire AI agents that never clock out</h2>
+      <p>Most AI sellers hand you a login and disappear. We build it into your business — configured, secured, connected to everything else you run, and backed by real support.</p>
+    </div>
+
+    <div class="band">
+      <div class="band-text">
+        <span class="band-tag">01 / never miss a lead</span>
+        <h3>AI phone &amp; chat agents</h3>
+        <p>A natural-sounding AI that answers every call and text 24/7, books appointments, and captures leads — so business doesn't walk out the door while you're on a job.</p>
+        <a href="#receptionist" class="band-link">Meet Luna →</a>
+      </div>
+      <div class="band-img" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fm=jpg&q=75&w=1200&auto=format&fit=crop');"></div>
+    </div>
+
+    <div class="band reverse">
+      <div class="band-text">
+        <span class="band-tag">02 / cameras that think</span>
+        <h3>AI smart security &amp; cameras</h3>
+        <p>Cameras and NVR setup with AI detection — person vs. car vs. package, loitering alerts, plate capture — so you get alerts that matter, not 200 motion pings a night.</p>
+        <a href="#contact" class="band-link">Get a quote →</a>
+      </div>
+      <div class="band-img" style="background-image:url('https://images.unsplash.com/photo-1549109926-58f039549485?fm=jpg&q=75&w=1200&auto=format&fit=crop');"></div>
+    </div>
+
+    <div class="band">
+      <div class="band-text">
+        <span class="band-tag">03 / kill the busywork</span>
+        <h3>AI automation &amp; content</h3>
+        <p>Automate the time-wasters — quoting, scheduling, follow-ups, email triage — plus a month of on-brand social posts generated in minutes. You review, it runs.</p>
+        <a href="#contact" class="band-link">Get a quote →</a>
+      </div>
+      <div class="band-img" style="background-image:url('https://images.unsplash.com/photo-1519558260268-cde7e03a0152?fm=jpg&q=75&w=1200&auto=format&fit=crop');"></div>
+    </div>
+
+    <div class="band reverse">
+      <div class="band-text">
+        <span class="band-tag">04 / the secure foundation</span>
+        <h3>IT &amp; cybersecurity</h3>
+        <p>The network it all runs on — wired setup, VPN access, and security hardening done right the first time. The trust anchor under every AI system above.</p>
+        <a href="#contact" class="band-link">Get a quote →</a>
+      </div>
+      <div class="band-img" style="background-image:url('https://images.unsplash.com/photo-1562408590-e32931084e23?fm=jpg&q=75&w=1200&auto=format&fit=crop');"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Industry cards ────────────────────────────────────────────────────── -->
+<section class="industries" id="industries">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Built for your industry</div>
+      <h2 class="section-title">Luna works for businesses like yours</h2>
+      <p>Trained on your services, your hours, and your voice — so it sounds like your business from day one, not a generic bot.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h4>Medical &amp; Dental</h4>
+        <p>Answer every patient call after hours, confirm appointments, and reduce no-shows — without adding staff.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h4>HVAC &amp; Trades</h4>
+        <p>Capture emergency service calls at 2am, book dispatch slots, and never lose a job to voicemail again.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
+        <h4>Law Firms</h4>
+        <p>Qualify leads, gather case details, and schedule consultations — so attorneys only talk to ready clients.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
+        <h4>Property Management</h4>
+        <p>Route maintenance requests, answer tenant questions 24/7, and log every interaction automatically.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+        <h4>Restaurants &amp; Hospitality</h4>
+        <p>Handle reservations, takeout orders, and hours inquiries so your team stays focused on the guests in front of them.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h4>Retail &amp; Services</h4>
+        <p>Answer product questions, handle appointment bookings, and follow up on quotes — automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Luna feature ──────────────────────────────────────────────────────── -->
+<section class="feature" id="receptionist">
+  <div class="wrap">
+    <div>
+      <span class="badge">▍Meet Luna</span>
+      <h2>Luna never sleeps, and never misses a call.</h2>
+      <p>Every missed call is a lost job. Luna answers instantly — day or night — sounds human, books appointments straight into your calendar, and texts you the leads that matter.</p>
+      <p>Set up once, trained on your business, running around the clock for less than a day of a part-time receptionist's wages.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="big">24/7</span><span class="lbl">always answering</span></div>
+        <div class="stat"><span class="big">&lt;1s</span><span class="lbl">pickup time</span></div>
+        <div class="stat"><span class="big">0</span><span class="lbl">missed leads</span></div>
+      </div>
+    </div>
+    <div class="chat-demo">
+      <div class="bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">incoming · after hours</span></div>
+      <div class="bubble them"><span class="who">Caller · 9:47 PM</span>Hey, do y'all have any openings this week? My AC just quit.</div>
+      <div class="bubble ai"><span class="who">Luna</span>Sorry to hear that! We can get a tech out tomorrow. I've got 8–10 AM or 1–3 PM open — which works?</div>
+      <div class="bubble them"><span class="who">Caller · 9:47 PM</span>Morning's better.</div>
+      <div class="bubble ai"><span class="who">Luna</span>Booked you for 8–10 AM. Can I grab your name, address, and a number to text the confirmation?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Comparison table ──────────────────────────────────────────────────── -->
+<section class="comparison-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The numbers don't lie</div>
+      <h2 class="section-title">Luna vs. a Human Receptionist</h2>
+      <p>The same job, done better, for a fraction of the cost.</p>
+    </div>
+    <div class="comp-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th class="col-feat">Feature</th>
+            <th class="col-human">Human Receptionist</th>
+            <th class="col-luna">Luna AI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-feat">Availability</td>
+            <td class="col-human"><span class="xmark">✕</span>9–5, weekdays only</td>
+            <td class="col-luna"><span class="cmark">✓</span>24/7/365</td>
+          </tr>
+          <tr>
+            <td class="col-feat">Monthly cost</td>
+            <td class="col-human"><span class="xmark">✕</span>$3,000–$5,000+</td>
+            <td class="col-luna"><span class="cmark">✓</span>Fraction of the cost</td>
+          </tr>
+          <tr>
+            <td class="col-feat">Sick days &amp; turnover</td>
+            <td class="col-human"><span class="xmark">✕</span>Yes — coverage gaps</td>
+            <td class="col-luna"><span class="cmark">✓</span>Never</td>
+          </tr>
+          <tr>
+            <td class="col-feat">Simultaneous calls</td>
+            <td class="col-human"><span class="xmark">✕</span>One at a time</td>
+            <td class="col-luna"><span class="cmark">✓</span>Unlimited at once</td>
+          </tr>
+          <tr>
+            <td class="col-feat">Lead text summaries</td>
+            <td class="col-human"><span class="xmark">✕</span>Manual notes</td>
+            <td class="col-luna"><span class="cmark">✓</span>Auto after every call</td>
+          </tr>
+          <tr>
+            <td class="col-feat">Setup time</td>
+            <td class="col-human"><span class="xmark">✕</span>Weeks of hiring</td>
+            <td class="col-luna"><span class="cmark">✓</span>Live in days</td>
+          </tr>
+          <tr>
+            <td class="col-feat">Training required</td>
+            <td class="col-human"><span class="xmark">✕</span>Ongoing</td>
+            <td class="col-luna"><span class="cmark">✓</span>Once, on your business</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ──────────────────────────────────────────────────────── -->
+<!-- REPLACE the quotes, names, and stats below with real client content.    -->
+<!-- Real testimonials are the single biggest trust signal on this page.     -->
+<section class="testimonials" id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Real results</div>
+      <h2 class="section-title">Don't take our word for it</h2>
+      <p>Here's what local owners say after Luna started answering their phones.</p>
+    </div>
+
+    <!-- Featured case study — REPLACE with a real client stat + quote -->
+    <div class="case-study">
+      <div class="case-stat">
+        <span class="case-num">3×</span>
+        <span class="case-lbl">more after-hours leads captured in the first 30 days</span>
+      </div>
+      <div class="case-body">
+        <p class="case-quote">"Luna booked 11 jobs while I was sleeping the first week. I had to call Tech Solutions to make sure it was actually working — it was."</p>
+        <div class="case-attr">
+          <div class="avatar">MT</div>
+          <div>
+            <div class="attr-name">Marcus T.</div>
+            <div class="attr-role">Owner, Precision HVAC &middot; Austin, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three shorter testimonials — REPLACE with real client quotes -->
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p>"Stopped missing calls on the weekend — that alone paid for it within the first month."</p>
+        <div class="testi-attr">
+          <div class="avatar">DW</div>
+          <div><div class="attr-name">Dana W.</div><div class="attr-role">Bloom Dental &middot; Nashville, TN</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p>"My front desk used to drown in voicemails. Luna handles 80% of them before I even come in."</p>
+        <div class="testi-attr">
+          <div class="avatar">KR</div>
+          <div><div class="attr-name">Kevin R.</div><div class="attr-role">Harbor Property Mgmt &middot; Tampa, FL</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p>"We went live in two days. Felt too easy — but it just worked, right out of the gate."</p>
+        <div class="testi-attr">
+          <div class="avatar">PN</div>
+          <div><div class="attr-name">Priya N.</div><div class="attr-role">The Graystone Law Group &middot; Dallas, TX</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Dark glow section ─────────────────────────────────────────────────── -->
+<section class="dark-glow">
+  <div class="wrap">
+    <span class="eyebrow">Sounds human. Works 24/7.</span>
+    <h2>The AI that answers like you would — only faster, and never off the clock.</h2>
+    <p class="sub">Trained on your services, your hours, your voice. Luna doesn't sound like a bot. It sounds like your business.</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a href="#contact" class="btn-primary">Get Luna for my business</a>
+      <a href="#receptionist" class="btn-ghost">See how it works →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Process ───────────────────────────────────────────────────────────── -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How it works</div>
+      <h2 class="section-title">Live in three steps</h2>
+    </div>
+    <div class="process">
+      <div class="process-step">
+        <span class="num">01</span>
+        <h3>Walkthrough</h3>
+        <p>A quick call to understand your business, where you're losing time or leads, and what's already in place.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">02</span>
+        <h3>Build &amp; train</h3>
+        <p>Your AI is configured and trained on your services, hours, and voice — then tested until it sounds right.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">03</span>
+        <h3>Go live &amp; handoff</h3>
+        <p>It goes live, secured and explained in plain terms — and there's a real person to call when you need a change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ───────────────────────────────────────────────────────────── -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Get started</div>
+      <h2>Stop losing leads to a phone nobody answers.</h2>
+      <p class="lead">Tell us what you need — AI receptionist, smart security, automation, or IT — and we'll follow up within one business day.</p>
+    </div>
+    <div>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-name">Your name</label>
+            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="f-phone">Phone number</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="f-email">Email address</label>
+          <input type="email" id="f-email" name="email" placeholder="jane@yourbusiness.com" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="f-business">Business name</label>
+          <input type="text" id="f-business" name="business" placeholder="Your Business LLC" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="f-service">I'm interested in</label>
+          <select id="f-service" name="service">
+            <option value="">Select a service…</option>
+            <option value="receptionist">AI phone receptionist (Luna)</option>
+            <option value="security">Smart security &amp; cameras</option>
+            <option value="automation">Automation &amp; AI content</option>
+            <option value="it">IT &amp; cybersecurity</option>
+            <option value="multiple">Multiple services</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="f-message">Anything else we should know?</label>
+          <textarea id="f-message" name="message" placeholder="Tell us about your business, current pain points, or questions."></textarea>
+        </div>
+        <button type="submit" id="submit-btn">
+          <span id="submit-text">Request a quote</span>
+          <svg id="submit-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="display:none;animation:spin .7s linear infinite;" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </button>
+      </form>
+      <div class="form-success" id="form-success">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>We'll be in touch soon!</h3>
+        <p>Thanks for reaching out. We typically follow up within one business day. In the meantime, feel free to email us at <a href="mailto:hello@techsolutions.com" style="color:var(--accent);">hello@techsolutions.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <g stroke="#5FCDA9" stroke-width="4" stroke-linecap="round">
+              <line x1="40" y1="40" x2="20" y2="20"/>
+              <line x1="40" y1="40" x2="62" y2="16"/>
+              <line x1="40" y1="40" x2="64" y2="62"/>
+              <line x1="40" y1="40" x2="22" y2="60"/>
+            </g>
+            <circle cx="20" cy="20" r="7" fill="#5FCDA9"/>
+            <circle cx="62" cy="16" r="7" fill="#5FCDA9"/>
+            <circle cx="64" cy="62" r="7" fill="#5FCDA9"/>
+            <circle cx="22" cy="60" r="7" fill="#5FCDA9"/>
+            <circle cx="40" cy="40" r="8.5" fill="var(--clay)"/>
+          </svg>
+          Tech Solutions
+        </div>
+        <p class="blurb">Intelligent systems, automation, and AI — built secure and built to last.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#receptionist">AI receptionist</a>
+        <a href="#services">Smart security</a>
+        <a href="#services">Automation</a>
+        <a href="#services">IT &amp; cybersecurity</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#process">How it works</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:hello@techsolutions.com">hello@techsolutions.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Tech Solutions. All rights reserved.</div>
+  </div>
+</footer>
+
+
+<!-- ── Luna Chatbot Widget ────────────────────────────────────────────────── -->
+<style>
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(0.7)}}
+  #luna-widget{position:fixed;bottom:26px;right:26px;z-index:9999;font-family:'Source Sans 3',sans-serif;}
+  #luna-btn{
+    background:var(--accent);color:#fff;border:none;border-radius:50px;
+    padding:13px 20px 13px 15px;display:flex;align-items:center;gap:9px;
+    cursor:pointer;font-size:14.5px;font-weight:600;
+    box-shadow:0 8px 30px -4px rgba(30,142,110,0.52);
+    transition:background .15s,transform .15s,box-shadow .15s;
+    font-family:'Source Sans 3',sans-serif;
+  }
+  #luna-btn:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 12px 36px -4px rgba(30,142,110,0.58);}
+  #luna-panel{
+    position:absolute;bottom:calc(100% + 14px);right:0;width:340px;
+    background:#fff;border-radius:16px;
+    box-shadow:0 24px 60px -16px rgba(16,32,27,0.38),0 0 0 1px var(--line);
+    overflow:hidden;display:flex;flex-direction:column;max-height:480px;
+    opacity:0;transform:translateY(14px) scale(0.97);pointer-events:none;
+    transition:opacity .2s,transform .2s;transform-origin:bottom right;
+  }
+  #luna-panel.open{opacity:1;transform:none;pointer-events:all;}
+  #luna-head{background:var(--bg-dark);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px;flex:none;}
+  .luna-av{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:none;}
+  .luna-av svg{display:block;}
+  .luna-info .ln{font-family:'Source Serif 4',serif;font-size:16px;font-weight:600;line-height:1.1;}
+  .luna-info .ls{font-family:'JetBrains Mono',monospace;font-size:10px;color:#5FCDA9;margin-top:3px;letter-spacing:0.05em;display:flex;align-items:center;gap:5px;}
+  .luna-pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:#5FCDA9;animation:pulse-dot 1.8s ease-in-out infinite;}
+  #luna-x{margin-left:auto;background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:22px;line-height:1;padding:2px 4px;transition:color .15s;}
+  #luna-x:hover{color:#fff;}
+  #luna-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth;}
+  .lm{padding:10px 14px;border-radius:13px;font-size:14px;line-height:1.5;max-width:88%;word-break:break-word;}
+  .lm.bot{background:var(--bg-alt);color:var(--ink);border-bottom-left-radius:3px;align-self:flex-start;}
+  .lm.usr{background:var(--accent-soft);color:var(--ink);border-bottom-right-radius:3px;align-self:flex-end;}
+  .lm.typing{background:var(--bg-alt);align-self:flex-start;padding:13px 17px;}
+  .lm.typing span{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink-soft);margin:0 2px;animation:ldot 1.2s infinite;}
+  .lm.typing span:nth-child(2){animation-delay:.18s;}
+  .lm.typing span:nth-child(3){animation-delay:.36s;}
+  @keyframes ldot{0%,80%,100%{transform:scale(0.55);opacity:.35}40%{transform:scale(1);opacity:1}}
+  #luna-foot{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line);flex:none;}
+  #luna-input{flex:1;border:1px solid var(--line);border-radius:8px;padding:9px 13px;font-size:14px;font-family:'Source Sans 3',sans-serif;color:var(--ink);outline:none;transition:border-color .15s;background:#fff;}
+  #luna-input::placeholder{color:#A8B5B0;}
+  #luna-input:focus{border-color:var(--accent);}
+  #luna-go{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:9px 15px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:background .15s;flex:none;}
+  #luna-go:hover{background:var(--accent-dark);}
+  #luna-go:disabled,#luna-input:disabled{opacity:.55;cursor:default;}
+  .luna-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px;}
+  .luna-chip{background:#fff;border:1px solid var(--line);color:var(--accent);border-radius:16px;padding:6px 13px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:background .15s,border-color .15s,transform .15s;}
+  .luna-chip:hover{background:var(--accent-soft);border-color:var(--accent);transform:translateY(-1px);}
+  @media (max-width:400px){
+    #luna-panel{width:calc(100vw - 32px);right:0;}
+  }
+</style>
+
+<div id="luna-widget">
+  <div id="luna-panel" role="dialog" aria-label="Chat with Luna" aria-modal="true">
+    <div id="luna-head">
+      <div class="luna-av">
+        <svg width="22" height="22" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <g stroke="#fff" stroke-width="5" stroke-linecap="round">
+            <line x1="40" y1="40" x2="20" y2="20"/><line x1="40" y1="40" x2="62" y2="16"/>
+            <line x1="40" y1="40" x2="64" y2="62"/><line x1="40" y1="40" x2="22" y2="60"/>
+          </g>
+          <circle cx="20" cy="20" r="6" fill="#fff"/><circle cx="62" cy="16" r="6" fill="#fff"/>
+          <circle cx="64" cy="62" r="6" fill="#fff"/><circle cx="22" cy="60" r="6" fill="#fff"/>
+          <circle cx="40" cy="40" r="8" fill="#C9743E"/>
+        </svg>
+      </div>
+      <div class="luna-info">
+        <div class="ln">Luna</div>
+        <div class="ls"><span class="luna-pulse"></span>online · AI assistant</div>
+      </div>
+      <button id="luna-x" aria-label="Close chat">×</button>
+    </div>
+    <div id="luna-msgs" role="log" aria-live="polite"></div>
+    <div id="luna-foot">
+      <input id="luna-input" type="text" placeholder="Ask me anything…" autocomplete="off" aria-label="Message Luna">
+      <button id="luna-go" aria-label="Send message">Send</button>
+    </div>
+  </div>
+  <button id="luna-btn" aria-label="Chat with Luna" aria-expanded="false" aria-controls="luna-panel">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    Chat with Luna
+  </button>
+</div>
+
+<script>
+(function(){
+
+  // ── Mobile nav toggle ───────────────────────────────────────────────────
+  var navToggle=document.getElementById('nav-toggle');
+  var mainNav=document.getElementById('main-nav');
+  if(navToggle && mainNav){
+    navToggle.addEventListener('click',function(){
+      var open=mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open);
+      navToggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    });
+    // Close nav when a link is clicked
+    mainNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.setAttribute('aria-label','Open menu');
+      });
+    });
+    // Close nav on outside click
+    document.addEventListener('click',function(e){
+      if(!mainNav.contains(e.target)&&!navToggle.contains(e.target)){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // ── Contact form ────────────────────────────────────────────────────────
+  var form=document.getElementById('contact-form');
+  var formSuccess=document.getElementById('form-success');
+  var submitBtn=document.getElementById('submit-btn');
+  var submitText=document.getElementById('submit-text');
+  var submitSpinner=document.getElementById('submit-spinner');
+
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){form.reportValidity();return;}
+      // Show loading state
+      submitBtn.disabled=true;
+      submitText.textContent='Sending…';
+      submitSpinner.style.display='block';
+
+      // Collect form data
+      var data=new FormData(form);
+      var payload={};
+      data.forEach(function(v,k){payload[k]=v;});
+
+      // Submit to your backend or form service (e.g. Formspree, Netlify Forms).
+      // Replace the URL below with your actual endpoint.
+      // For a quick no-backend option: sign up at formspree.io and use your form ID.
+      var FORM_ENDPOINT=''; // e.g. 'https://formspree.io/f/YOUR_ID'
+
+      function showSuccess(){
+        form.style.display='none';
+        formSuccess.style.display='block';
+      }
+
+      if(FORM_ENDPOINT){
+        fetch(FORM_ENDPOINT,{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify(payload)
+        })
+        .then(function(r){
+          if(r.ok){showSuccess();}
+          else{throw new Error();}
+        })
+        .catch(function(){
+          // Fallback: open email client with prefilled subject
+          window.location.href='mailto:hello@techsolutions.com?subject=Quote+request+from+'+encodeURIComponent(payload.name||'Website')+'&body='+encodeURIComponent(JSON.stringify(payload,null,2));
+          submitBtn.disabled=false;
+          submitText.textContent='Request a quote';
+          submitSpinner.style.display='none';
+        });
+      } else {
+        // No endpoint configured yet — simulate success after a brief delay
+        setTimeout(showSuccess,900);
+      }
+    });
+  }
+
+  // ── Nav active state on scroll ──────────────────────────────────────────
+  var navLinks=document.querySelectorAll('nav a[href^="#"]');
+  if(navLinks.length && window.IntersectionObserver){
+    var tracked=[];
+    navLinks.forEach(function(a){
+      var id=a.getAttribute('href').slice(1);
+      var el=document.getElementById(id);
+      if(el) tracked.push({el:el,a:a});
+    });
+    var nObs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(!entry.isIntersecting) return;
+        var id=entry.target.id;
+        navLinks.forEach(function(a){
+          a.classList.toggle('active',a.getAttribute('href')==='#'+id);
+        });
+      });
+    },{rootMargin:'-35% 0px -60% 0px'});
+    tracked.forEach(function(t){nObs.observe(t.el);});
+  }
+
+  // ── Scroll reveal ───────────────────────────────────────────────────────
+  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduceMotion){
+    document.documentElement.classList.add('reveal-on');
+    var revealEls=[];
+    function mark(el){el.classList.add('reveal');revealEls.push(el);}
+    ['.section-head','.band','.feature .wrap > div','.chat-demo','.dark-glow .wrap > *','.contact .wrap > *','.comp-wrap','.case-study']
+      .forEach(function(sel){document.querySelectorAll(sel).forEach(mark);});
+    ['.industries-grid > *','.process > *','.testi-grid > *'].forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(el,i){el.classList.add('d'+((i%5)+1));mark(el);});
+    });
+    if(window.IntersectionObserver){
+      var rObs=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting) return;
+          e.target.classList.add('in');rObs.unobserve(e.target);
+        });
+      },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+      revealEls.forEach(function(el){rObs.observe(el);});
+    } else {
+      revealEls.forEach(function(el){el.classList.add('in');});
+    }
+  }
+
+  // ── Luna chat widget ────────────────────────────────────────────────────
+  var panel=document.getElementById('luna-panel'),
+      btn=document.getElementById('luna-btn'),
+      closeX=document.getElementById('luna-x'),
+      msgs=document.getElementById('luna-msgs'),
+      input=document.getElementById('luna-input'),
+      go=document.getElementById('luna-go'),
+      isOpen=false,busy=false,history=[];
+
+  var WORKER_URL='/api/chat';
+  var WORKER_READY=/^(https?:\/\/|\/)/.test(WORKER_URL) && WORKER_URL.indexOf('REPLACE_WITH')===-1;
+
+  var DEFAULT_REPLY="Great question! I can help with our AI receptionist, smart security, automation, and IT — or get you booked for a free walkthrough. You can also reach the team at hello@techsolutions.com. What would you like to dig into?";
+  var RULES=[
+    {re:/are you (a |an )?(real|human|bot|ai|robot|person)|who are you|what are you/, r:"I'm Luna, Tech Solutions' AI assistant — and yes, a real AI 🙂 The same tech can answer your business's calls and texts 24/7, sounding just like your team. Want to see it on a free walkthrough?"},
+    {re:/(price|pricing|cost|how much|\bquote\b|\brate\b|\bfee\b|expensive|afford|budget)/, r:"Pricing is tailored to your business and what you need, so I won't toss out a random number. The best next step is a free walkthrough — we scope it and send you an exact quote. Want me to point you to the form?"},
+    {re:/(luna|receptionist|answer|phone|\bcall|miss|voicemail|booking|appointment|lead)/, r:"That's me 🙂 Luna answers every call and text 24/7, books appointments straight into your calendar, and texts you the lead details after every call — so you never lose a job to voicemail. Want it set up for your business? A free walkthrough is the fastest way."},
+    {re:/(security|camera|cctv|surveillance|\bnvr\b|alarm|theft|loiter|intruder|monitor)/, r:"Our AI smart security uses cameras that actually think — person vs. car vs. package, loitering alerts, plate capture — so you get alerts that matter instead of 200 motion pings a night. Happy to scope a setup on a free walkthrough."},
+    {re:/(automat|workflow|busywork|follow.?up|\bcontent\b|social|scheduling|quoting|email triage)/, r:"We automate the time-wasters — quoting, scheduling, follow-ups, email triage — plus a month of on-brand social posts in minutes. You review, it runs. Want to talk through what to automate first?"},
+    {re:/(cyber|network|\bvpn\b|firewall|wi-?fi|breach|hardening|it support|\bit &|infrastructure)/, r:"We handle the IT & cybersecurity foundation it all runs on — wired setup, VPN access, firewalls, and security hardening done right the first time. Want us to take a look at your setup?"},
+    {re:/(hour|\bopen\b|available|24\/7|night|weekend|holiday|after hours|always)/, r:"Luna runs 24/7/365 — days, nights, weekends, holidays. It never sleeps, so you never miss a lead. Our team is reachable during business hours for setup and changes."},
+    {re:/(book|walkthrough|get started|sign up|\bdemo\b|contact|talk to|speak to|reach|\bemail\b|\bhuman\b|\bsales\b|how do i start)/, r:"Love it 🙌 Two easy ways: fill out the quick form on this page (scroll to "Get started"), or email hello@techsolutions.com. We'll follow up fast to book your free walkthrough."},
+    {re:/(thank|thx|appreciate|awesome|great|perfect|cool)/, r:"Anytime! 🙌 If you're ready, the free walkthrough is the best next step — just fill out the form below or email hello@techsolutions.com."},
+    {re:/(bye|see ya|later|good ?night|goodnight|cya)/, r:"Take care! Whenever you're ready, we're here 24/7. 👋"},
+    {re:/^(hi|hey|hello|yo|howdy|sup|hiya|hi there)\b/, r:"Hey there! I'm Luna 👋 I can tell you about our AI receptionist, smart security, automation, or IT — or get you set up with a free walkthrough. What are you after?"}
+  ];
+  function respondLocally(text){
+    var t=(text||'').toLowerCase();
+    for(var i=0;i<RULES.length;i++){ if(RULES[i].re.test(t)) return RULES[i].r; }
+    return DEFAULT_REPLY;
+  }
+  var STARTERS=["What's Luna?","Pricing","Smart security","Book a walkthrough"];
+
+  function addMsg(text,cls){
+    var el=document.createElement('div');
+    el.className='lm '+cls;el.textContent=text;
+    msgs.appendChild(el);msgs.scrollTop=msgs.scrollHeight;return el;
+  }
+  function addChips(){
+    var wrap=document.createElement('div');
+    wrap.className='luna-chips';
+    STARTERS.forEach(function(label){
+      var b=document.createElement('button');
+      b.type='button';b.className='luna-chip';b.textContent=label;
+      b.addEventListener('click',function(){submit(label);});
+      wrap.appendChild(b);
+    });
+    msgs.appendChild(wrap);msgs.scrollTop=msgs.scrollHeight;
+  }
+  function clearChips(){
+    var c=msgs.querySelector('.luna-chips');
+    if(c) c.parentNode.removeChild(c);
+  }
+  function showTyping(){
+    var el=document.createElement('div');
+    el.className='lm typing';el.innerHTML='<span></span><span></span><span></span>';
+    msgs.appendChild(el);msgs.scrollTop=msgs.scrollHeight;return el;
+  }
+  function setDisabled(v){busy=v;input.disabled=v;go.disabled=v;}
+
+  function replyFor(text){
+    if(WORKER_READY){
+      return fetch(WORKER_URL,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({message:text,history:history})
+      })
+      .then(function(r){if(!r.ok) throw new Error();return r.json();})
+      .then(function(data){return data.reply||respondLocally(text);})
+      .catch(function(){return respondLocally(text);});
+    }
+    return new Promise(function(resolve){
+      setTimeout(function(){resolve(respondLocally(text));},650+Math.random()*450);
+    });
+  }
+  function submit(text){
+    text=(text||'').trim();
+    if(!text||busy) return;
+    clearChips();
+    addMsg(text,'usr');input.value='';input.focus();
+    var dot=showTyping();setDisabled(true);
+    replyFor(text).then(function(reply){
+      if(dot.parentNode) msgs.removeChild(dot);
+      addMsg(reply,'bot');
+      history.push({role:'user',content:text});
+      history.push({role:'assistant',content:reply});
+      if(history.length>20) history=history.slice(-20);
+    }).catch(function(){
+      if(dot.parentNode) msgs.removeChild(dot);
+      addMsg("I'm having trouble connecting. Email hello@techsolutions.com and we'll get right back to you!",'bot');
+    }).finally(function(){setDisabled(false);});
+  }
+  function openPanel(){
+    isOpen=true;panel.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+    if(!msgs.children.length){
+      setTimeout(function(){
+        addMsg("Hi! I'm Luna — your AI assistant from Tech Solutions. Ask me about our services, pricing, or how to get started.","bot");
+        addChips();
+      },220);
+    }
+    setTimeout(function(){input.focus();},240);
+  }
+  function closePanel(){isOpen=false;panel.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){isOpen?closePanel():openPanel();});
+  closeX.addEventListener('click',closePanel);
+  go.addEventListener('click',function(){submit(input.value);});
+  input.addEventListener('keydown',function(e){if(e.key==='Enter')submit(input.value);});
+  // Close on Escape
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen)closePanel();});
+
+})();
+</script>
+
+</body>
+</html>
