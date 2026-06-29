@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Solutions — AI Phone Agents, Smart Security &amp; Automation for Business</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><g stroke='%231E8E6E' stroke-width='5' stroke-linecap='round'><line x1='40' y1='40' x2='20' y2='20'/><line x1='40' y1='40' x2='62' y2='16'/><line x1='40' y1='40' x2='64' y2='62'/><line x1='40' y1='40' x2='22' y2='60'/></g><circle cx='20' cy='20' r='8' fill='%231E8E6E'/><circle cx='62' cy='16' r='8' fill='%231E8E6E'/><circle cx='64' cy='62' r='8' fill='%231E8E6E'/><circle cx='22' cy='60' r='8' fill='%231E8E6E'/><circle cx='40' cy='40' r='9' fill='%23C9743E'/></svg>">
+<meta name="description" content="Your Agent answers every call 24/7, books appointments, and captures every lead. Tech Solutions builds AI agents, smart security, and workflow automation for local businesses.">
+<meta property="og:title" content="Tech Solutions — AI Phone Agents, Smart Security &amp; Automation">
+<meta property="og:description" content="Your Agent answers every call 24/7, books appointments, and captures every lead. AI agents, smart security, and automation for local businesses.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #F7F7F7;
+  --bg-muted: #F3F3F3;
+  --ink: #111111;
+  --ink-2: #444444;
+  --ink-3: #888888;
+  --border: #EFEFEF;
+  --border-mid: #E5E5E5;
+  --accent: #1E8E6E;
+  --accent-dark: #157056;
+  --accent-soft: #EBF7F3;
+  --accent-glow: rgba(30,142,110,0.10);
+  --clay: #C9743E;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-xs: 8px;
+  --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 40px -8px rgba(0,0,0,0.12);
+  --shadow-lg: 0 20px 60px -16px rgba(0,0,0,0.16);
+  --shadow-xl: 0 32px 80px -20px rgba(0,0,0,0.20);
+  --section-pad: 112px;
+}
+
+/* ── Reset ── */
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+
+/* ── Buttons ── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;font-size:15px;
+  border-radius:50px;padding:14px 28px;
+  transition:all .22s cubic-bezier(.22,.61,.36,1);
+  cursor:pointer;border:none;font-family:'Inter',sans-serif;
+  letter-spacing:-0.01em;
+}
+.btn-primary{
+  background:var(--ink);color:#fff;
+  box-shadow:0 4px 24px -4px rgba(17,17,17,0.32);
+}
+.btn-primary:hover{
+  background:#222;
+  transform:translateY(-2px);
+  box-shadow:0 10px 36px -6px rgba(17,17,17,0.38);
+}
+.btn-accent{
+  background:var(--accent);color:#fff;
+  box-shadow:0 4px 24px -4px rgba(30,142,110,0.38);
+}
+.btn-accent:hover{
+  background:var(--accent-dark);
+  transform:translateY(-2px);
+  box-shadow:0 10px 36px -6px rgba(30,142,110,0.45);
+}
+.btn-outline{
+  background:#fff;color:var(--ink);
+  border:1.5px solid var(--border-mid);
+}
+.btn-outline:hover{
+  border-color:#BBBBBB;
+  background:#FAFAFA;
+  transform:translateY(-1px);
+}
+.btn-ghost-white{
+  background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,0.22);
+}
+.btn-ghost-white:hover{
+  background:rgba(255,255,255,0.09);
+  border-color:rgba(255,255,255,0.36);
+}
+.btn-lg{padding:17px 34px;font-size:16px;}
+
+/* ── Nav ── */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+header .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+}
+.logo{
+  font-size:17px;font-weight:800;
+  display:flex;align-items:center;gap:9px;
+  letter-spacing:-0.03em;color:var(--ink);
+}
+nav{display:flex;gap:32px;}
+nav a{
+  font-size:14px;color:var(--ink-3);
+  font-weight:500;letter-spacing:-0.01em;
+  transition:color .15s;
+}
+nav a:hover,nav a.active{color:var(--ink);}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;border-radius:8px;}
+.nav-toggle:hover{background:var(--bg-subtle);}
+
+/* ── Hero ── */
+.hero{
+  text-align:center;
+  padding:120px 32px 100px;
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+}
+/* Soft glow behind headline */
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-120px;left:50%;
+  transform:translateX(-50%);
+  width:1100px;height:700px;
+  background:radial-gradient(ellipse at 50% 30%,
+    rgba(30,142,110,0.09) 0%,
+    rgba(30,142,110,0.04) 35%,
+    transparent 65%
+  );
+  pointer-events:none;
+}
+/* Secondary subtle warm glow */
+.hero::after{
+  content:'';
+  position:absolute;
+  bottom:-80px;left:50%;
+  transform:translateX(-50%);
+  width:800px;height:400px;
+  background:radial-gradient(ellipse at center,rgba(201,116,62,0.05) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--ink-2);
+  border-radius:50px;padding:7px 16px;font-size:13px;font-weight:600;
+  margin-bottom:32px;
+  border:1.5px solid var(--border-mid);
+  box-shadow:var(--shadow-sm);
+  letter-spacing:-0.01em;
+}
+.hero-badge-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);flex:none;
+}
+.hero h1{
+  font-size:clamp(46px,6.5vw,80px);
+  font-weight:900;
+  line-height:1.02;
+  letter-spacing:-0.04em;
+  color:var(--ink);
+  max-width:860px;
+  margin:0 auto 24px;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--accent) 0%,#34C99A 55%,#1E8E6E 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero .sub{
+  font-size:19px;color:var(--ink-3);
+  max-width:560px;margin:0 auto 40px;
+  line-height:1.7;font-weight:400;
+  letter-spacing:-0.01em;
+}
+.hero-ctas{
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+}
+.hero-trust{
+  margin-top:24px;font-size:13px;color:var(--ink-3);
+  letter-spacing:-0.005em;
+}
+.hero-trust strong{color:var(--ink-2);font-weight:600;}
+
+/* ── Stats bar ── */
+.stats-bar{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:var(--bg-subtle);
+}
+.stats-bar .wrap{
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat-item{
+  padding:32px 24px;text-align:center;
+  border-right:1px solid var(--border);
+}
+.stat-item:last-child{border-right:none;}
+.stat-item .snum{
+  font-size:42px;font-weight:900;color:var(--ink);
+  letter-spacing:-0.04em;line-height:1;
+}
+.stat-item .slbl{
+  font-size:13px;color:var(--ink-3);
+  margin-top:7px;font-weight:500;
+  letter-spacing:-0.005em;
+}
+
+/* ── Marquee ── */
+.marquee-wrap{
+  overflow:hidden;border-bottom:1px solid var(--border);
+  padding:16px 0;background:#fff;
+}
+.marquee-inner{
+  display:flex;width:max-content;
+  animation:marquee 32s linear infinite;
+}
+.marquee-inner span{
+  font-size:13px;font-weight:600;color:#BBBBBB;
+  white-space:nowrap;padding:0 36px;
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── Section chrome ── */
+section{padding:var(--section-pad) 0;}
+.section-label{
+  display:inline-block;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.12em;
+  color:var(--accent);margin-bottom:16px;
+}
+h2.section-title{
+  font-size:clamp(30px,4vw,48px);
+  font-weight:900;letter-spacing:-0.035em;
+  line-height:1.06;margin-bottom:18px;
+  color:var(--ink);
+}
+.section-sub{
+  font-size:18px;color:var(--ink-3);
+  max-width:520px;line-height:1.7;
+  letter-spacing:-0.01em;font-weight:400;
+}
+.section-head-center{text-align:center;margin-bottom:64px;}
+.section-head-center .section-sub{margin:0 auto;}
+
+/* ── Use case carousel ── */
+.usecases{background:#fff;overflow:hidden;}
+.cases-scroll{
+  display:flex;gap:20px;
+  overflow-x:auto;
+  padding:0 32px 24px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.cases-scroll::-webkit-scrollbar{display:none;}
+.case-card{
+  flex:none;width:320px;
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:32px;
+  scroll-snap-align:start;
+  transition:box-shadow .25s cubic-bezier(.22,.61,.36,1),
+             transform .25s cubic-bezier(.22,.61,.36,1),
+             border-color .25s;
+  box-shadow:var(--shadow-sm);
+}
+.case-card:hover{
+  box-shadow:var(--shadow-lg);
+  transform:translateY(-4px);
+  border-color:#E0E0E0;
+}
+.case-icon{
+  width:48px;height:48px;border-radius:14px;
+  background:var(--bg-subtle);color:var(--ink-3);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+  border:1.5px solid var(--border);
+}
+.case-icon svg{width:22px;height:22px;}
+.case-card h3{
+  font-size:17px;font-weight:800;margin-bottom:10px;
+  letter-spacing:-0.025em;line-height:1.25;color:var(--ink);
+}
+.case-card .case-body{
+  font-size:14px;color:var(--ink-3);line-height:1.65;
+}
+.case-card .case-prompt{
+  font-size:13.5px;color:var(--ink-2);line-height:1.65;
+  background:var(--bg-subtle);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  padding:16px;margin-top:16px;
+  font-style:italic;
+  letter-spacing:-0.005em;
+}
+
+/* ── Feature badges ── */
+.features{background:var(--bg-subtle);}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.feat-card{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:36px 32px;
+  transition:box-shadow .25s cubic-bezier(.22,.61,.36,1),
+             transform .25s cubic-bezier(.22,.61,.36,1),
+             border-color .25s;
+  box-shadow:var(--shadow-sm);
+}
+.feat-card:hover{
+  box-shadow:var(--shadow-md);
+  transform:translateY(-3px);
+  border-color:#E0E0E0;
+}
+.feat-badge{
+  width:52px;height:52px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;font-size:24px;
+  background:var(--bg-subtle);
+  border:1.5px solid var(--border);
+}
+.feat-card h3{
+  font-size:17px;font-weight:800;margin-bottom:10px;
+  letter-spacing:-0.025em;line-height:1.25;color:var(--ink);
+}
+.feat-card p{font-size:14.5px;color:var(--ink-3);line-height:1.65;letter-spacing:-0.005em;}
+
+/* ── Agent demo ── */
+.lstat .lbl{font-size:12px;color:var(--ink-3);font-weight:500;margin-top:5px;letter-spacing:0.02em;}
+
+/* Chat window */
+.chat-window{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow-xl);
+}
+.chat-topbar{
+  background:var(--ink);color:#fff;
+  display:flex;align-items:center;gap:12px;padding:16px 20px;
+}
+.chat-av{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--accent);display:flex;
+  align-items:center;justify-content:center;flex:none;
+}
+.chat-av svg{width:18px;height:18px;}
+.chat-name{font-size:14px;font-weight:700;letter-spacing:-0.01em;}
+.chat-status{font-size:11px;color:#5FCDA9;display:flex;align-items:center;gap:4px;margin-top:2px;}
+.online-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#5FCDA9;
+  animation:pulse-dot 1.8s ease-in-out infinite;
+}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.35}}
+.chat-tag{
+  margin-left:auto;font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:rgba(255,255,255,0.35);
+  background:rgba(255,255,255,0.07);
+  padding:3px 9px;border-radius:20px;
+}
+.chat-body{padding:20px;}
+.bubble{
+  padding:11px 15px;border-radius:16px;
+  margin-bottom:10px;font-size:14px;
+  line-height:1.55;max-width:88%;
+  letter-spacing:-0.005em;
+}
+.bubble.them{
+  background:var(--bg-subtle);
+  border:1.5px solid var(--border);
+  border-bottom-left-radius:4px;
+}
+.bubble.ai{
+  background:var(--accent-soft);
+  border:1.5px solid rgba(30,142,110,0.15);
+  margin-left:auto;border-bottom-right-radius:4px;
+}
+.bubble .who{
+  display:block;font-size:10px;font-weight:700;
+  color:var(--ink-3);margin-bottom:4px;
+  text-transform:uppercase;letter-spacing:0.07em;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* ── Comparison ── */
+.comparison{background:var(--bg-subtle);}
+.comp-wrap{overflow-x:auto;}
+.comp-table{
+  width:100%;border-collapse:separate;
+  border-spacing:0;font-size:15px;min-width:540px;
+}
+.comp-table th{
+  padding:16px 22px;text-align:left;
+  font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.1em;
+}
+.comp-table th.col-feat{color:var(--ink-3);}
+.comp-table th.col-human{
+  color:var(--ink-3);background:#fff;
+  border:1.5px solid var(--border);border-bottom:none;
+}
+.comp-table th.col-agent{
+  background:var(--ink);color:#fff;
+  border-radius:14px 14px 0 0;text-align:center;
+  letter-spacing:0.08em;
+}
+.comp-table td{padding:14px 22px;border-top:1px solid var(--border);}
+.comp-table td.col-feat{font-weight:700;font-size:14.5px;letter-spacing:-0.01em;}
+.comp-table td.col-human{
+  color:var(--ink-3);background:#fff;
+  border-left:1.5px solid var(--border);
+  border-right:1.5px solid var(--border);
+  font-size:14.5px;
+}
+.comp-table td.col-agent{
+  background:var(--bg-subtle);
+  font-weight:700;text-align:center;
+  font-size:14.5px;
+}
+.cmark{color:var(--accent);margin-right:5px;font-weight:800;}
+.xmark{color:#CCCCCC;margin-right:5px;}
+
+/* ── Industries ── */
+.industries{background:#fff;}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.ind-card{
+  border:1.5px solid var(--border);border-radius:var(--radius);
+  padding:32px;
+  transition:all .25s cubic-bezier(.22,.61,.36,1);
+  cursor:default;background:#fff;
+  box-shadow:var(--shadow-sm);
+}
+.ind-card:hover{
+  border-color:#D5D5D5;
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+}
+.ind-icon{
+  width:48px;height:48px;border-radius:14px;
+  background:var(--bg-subtle);color:var(--ink-3);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+  border:1.5px solid var(--border);
+  transition:all .25s;
+}
+.ind-icon svg{width:22px;height:22px;}
+.ind-card:hover .ind-icon{
+  background:var(--ink);color:#fff;
+  border-color:var(--ink);
+}
+.ind-card h4{
+  font-size:16px;font-weight:800;margin-bottom:8px;
+  letter-spacing:-0.02em;color:var(--ink);
+}
+.ind-card p{font-size:14px;color:var(--ink-3);line-height:1.6;letter-spacing:-0.005em;}
+
+/* ── FAQ ── */
+.faq{background:#fff;}
+.faq-list{max-width:740px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item:first-child{border-top:1px solid var(--border);}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 0;text-align:left;
+  font-size:16.5px;font-weight:700;color:var(--ink);
+  font-family:'Inter',sans-serif;gap:20px;
+  letter-spacing:-0.02em;line-height:1.3;
+}
+.faq-icon{
+  flex:none;width:28px;height:28px;border-radius:50%;
+  background:var(--bg-subtle);border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .25s cubic-bezier(.22,.61,.36,1);
+  color:var(--ink-3);
+}
+.faq-item.open .faq-icon{
+  background:var(--ink);border-color:var(--ink);
+  color:#fff;transform:rotate(45deg);
+}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.22,.61,.36,1);}
+.faq-item.open .faq-a{max-height:320px;}
+.faq-a p{
+  padding-bottom:22px;font-size:15.5px;
+  color:var(--ink-3);line-height:1.75;
+  letter-spacing:-0.005em;
+}
+
+/* ── CTA banner ── */
+.cta-banner{
+  background:var(--ink);
+  text-align:center;padding:112px 32px;
+  position:relative;overflow:hidden;
+}
+.cta-banner::before{
+  content:'';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:900px;height:500px;
+  background:radial-gradient(ellipse,rgba(30,142,110,0.22) 0%,transparent 60%);
+  pointer-events:none;
+}
+.cta-banner::after{
+  content:'';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:400px;height:300px;
+  background:radial-gradient(ellipse,rgba(201,116,62,0.12) 0%,transparent 65%);
+  pointer-events:none;
+}
+.cta-banner .wrap{position:relative;z-index:1;}
+.cta-banner h2{
+  color:#fff;font-size:clamp(32px,4.5vw,56px);
+  font-weight:900;letter-spacing:-0.04em;
+  line-height:1.06;margin-bottom:18px;
+}
+.cta-banner p{
+  color:rgba(255,255,255,0.48);font-size:18px;
+  margin-bottom:36px;letter-spacing:-0.01em;
+  max-width:500px;margin-left:auto;margin-right:auto;
+}
+.cta-banner .btn-white{
+  background:#fff;color:var(--ink);
+  font-weight:800;font-size:16px;padding:17px 34px;
+  border-radius:50px;border:none;cursor:pointer;
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Inter',sans-serif;letter-spacing:-0.01em;
+  transition:all .22s cubic-bezier(.22,.61,.36,1);
+  box-shadow:0 4px 24px rgba(0,0,0,0.28);
+  text-decoration:none;
+}
+.cta-banner .btn-white:hover{
+  background:#F5F5F5;
+  transform:translateY(-2px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* ── Contact ── */
+.contact{background:var(--bg-subtle);}
+.contact-wrap{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:start;
+}
+.contact-left h2{
+  font-size:clamp(26px,3.5vw,40px);font-weight:900;
+  letter-spacing:-0.035em;margin-bottom:16px;color:var(--ink);
+}
+.contact-left p{
+  font-size:16px;color:var(--ink-3);
+  line-height:1.7;margin-bottom:32px;
+  letter-spacing:-0.005em;
+}
+.contact-badge{
+  display:flex;align-items:center;gap:12px;
+  padding:16px 20px;
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  margin-bottom:12px;
+  box-shadow:var(--shadow-sm);
+}
+.contact-badge svg{color:var(--accent);flex:none;}
+.contact-badge span{font-size:14px;font-weight:600;color:var(--ink-2);letter-spacing:-0.01em;}
+form{
+  display:flex;flex-direction:column;gap:14px;
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:36px;
+  box-shadow:var(--shadow-md);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-field{display:flex;flex-direction:column;gap:6px;}
+.form-field label{
+  font-size:12px;font-weight:700;color:var(--ink-3);
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+form input,form textarea,form select{
+  background:var(--bg-subtle);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-xs);
+  padding:13px 16px;color:var(--ink);
+  font-family:'Inter',sans-serif;font-size:14.5px;
+  transition:border-color .18s,background .18s;
+  letter-spacing:-0.005em;
+}
+form input:focus,form textarea:focus,form select:focus{
+  outline:none;border-color:var(--accent);background:#fff;
+}
+form input::placeholder,form textarea::placeholder{color:#BBBBBB;}
+form select{
+  cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23AAAAAA' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;
+  background-color:var(--bg-subtle);padding-right:40px;
+}
+form textarea{resize:vertical;min-height:110px;}
+form button[type="submit"]{
+  background:var(--ink);color:#fff;border:none;
+  padding:16px;border-radius:50px;
+  font-size:15px;font-weight:800;cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:background .18s,transform .18s,box-shadow .18s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  letter-spacing:-0.01em;
+  box-shadow:0 4px 20px -4px rgba(17,17,17,0.3);
+}
+form button[type="submit"]:hover:not(:disabled){
+  background:#222;
+  transform:translateY(-1px);
+  box-shadow:0 8px 32px -6px rgba(17,17,17,0.36);
+}
+form button[type="submit"]:disabled{opacity:.55;cursor:default;}
+.form-success{
+  background:var(--accent-soft);
+  border:1.5px solid rgba(30,142,110,0.2);
+  border-radius:var(--radius);padding:36px;
+  text-align:center;display:none;
+}
+.form-success svg{color:var(--accent);margin:0 auto 14px;display:block;}
+.form-success h3{font-size:19px;font-weight:800;margin-bottom:8px;letter-spacing:-0.02em;}
+.form-success p{font-size:14.5px;color:var(--ink-3);}
+
+/* ── Process ── */
+.process-section{background:var(--bg-subtle);}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.process-step{position:relative;padding-left:0;}
+.step-num{
+  font-size:11px;font-weight:800;text-transform:uppercase;
+  letter-spacing:0.12em;color:var(--accent);
+  margin-bottom:16px;display:flex;align-items:center;gap:10px;
+}
+.step-num::after{
+  content:'';flex:1;height:1.5px;
+  background:var(--border-mid);
+}
+.process-step h3{
+  font-size:19px;font-weight:800;margin-bottom:10px;
+  letter-spacing:-0.025em;color:var(--ink);
+}
+.process-step p{font-size:15px;color:var(--ink-3);line-height:1.65;letter-spacing:-0.005em;}
+
+/* ── Footer ── */
+footer{background:#111;padding:60px 0 36px;}
+.foot-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+  gap:48px;margin-bottom:48px;
+}
+footer .logo{color:#fff;margin-bottom:14px;font-size:16px;}
+footer .blurb{
+  color:rgba(255,255,255,0.35);font-size:14px;
+  max-width:270px;line-height:1.65;
+  letter-spacing:-0.005em;
+}
+.foot-col h4{
+  font-size:11px;text-transform:uppercase;
+  letter-spacing:0.1em;color:rgba(255,255,255,0.3);
+  margin-bottom:16px;font-weight:700;
+}
+.foot-col a{
+  display:block;color:rgba(255,255,255,0.48);
+  font-size:14px;margin-bottom:10px;
+  transition:color .15s;letter-spacing:-0.005em;
+}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:24px;color:rgba(255,255,255,0.25);
+  font-size:13px;letter-spacing:-0.005em;
+}
+
+/* ── Scroll reveal ── */
+@media (prefers-reduced-motion:no-preference){
+  html.js .reveal{
+    opacity:0;transform:translateY(24px);
+    transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+               transform .7s cubic-bezier(.22,.61,.36,1);
+  }
+  html.js .reveal.in{opacity:1;transform:none;}
+  html.js .reveal.d1{transition-delay:.07s;}
+  html.js .reveal.d2{transition-delay:.14s;}
+  html.js .reveal.d3{transition-delay:.21s;}
+  html.js .reveal.d4{transition-delay:.28s;}
+  html.js .reveal.d5{transition-delay:.35s;}
+  html.js .reveal.d6{transition-delay:.42s;}
+}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .process-grid{grid-template-columns:1fr;gap:28px;}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .stats-bar .wrap{grid-template-columns:1fr 1fr;}
+  .stat-item{border-bottom:1px solid var(--border);}
+  nav{
+    display:none;position:absolute;top:72px;left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--border);
+    flex-direction:column;gap:0;padding:8px 0;
+    box-shadow:var(--shadow-md);
+  }
+  nav.open{display:flex;}
+  nav a{padding:13px 32px;}
+  .nav-toggle{display:block;}
+  header .btn{display:none;}
+  .form-row{grid-template-columns:1fr;}
+  form{padding:28px 24px;}
+}
+@media(max-width:560px){
+  :root{--section-pad:80px;}
+  .features-grid,.ind-grid{grid-template-columns:1fr;}
+  .wrap{padding:0 20px;}
+  .hero{padding:96px 20px 80px;}
+  .cases-scroll{padding:0 20px 20px;}
+  .hero h1{letter-spacing:-0.03em;}
+}
+
+/* ── Agent sections (from Your Agent build) ── */
+.agent-hero{
+  text-align:center;
+  padding:120px 28px 100px;
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.agent-hero::before{
+  content:'';
+  position:absolute;
+  top:-200px;left:50%;
+  transform:translateX(-50%);
+  width:900px;height:600px;
+  background:radial-gradient(ellipse at center,rgba(30,142,110,0.09) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.agent-hero h1{
+  font-size:clamp(38px,5.5vw,68px);
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-0.03em;
+  color:var(--ink);
+  max-width:860px;
+  margin:0 auto 24px;
+}
+
+.agent-hero h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--accent) 0%,#34C99A 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+.agent-hero .sub{
+  font-size:19px;color:var(--ink-2);
+  max-width:600px;margin:0 auto 40px;
+  line-height:1.65;font-weight:400;
+}
+
+.agent-hero-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;
+  border-radius:50px;padding:16px 36px;
+  font-size:16px;font-weight:700;
+  box-shadow:0 4px 24px -4px rgba(30,142,110,0.45);
+  transition:all .18s;
+  font-family:'Inter',sans-serif;
+  border:none;cursor:pointer;
+}
+
+.agent-hero-trust strong{color:var(--ink-2);}
+
+.astat .lbl{font-size:12px;color:var(--ink-3);font-weight:500;margin-top:4px;}
+
+.integrations-line{
+  background:var(--bg-subtle);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  text-align:center;
+  padding:40px 28px;
+}
+
+.integrations-line p{
+  font-size:16px;color:var(--ink-2);max-width:560px;margin:0 auto;line-height:1.65;
+}
+
+.integrations-line strong{color:var(--ink);font-weight:700;}
+
+.comp-table th.col-agent{background:var(--accent);color:#fff;border-radius:12px 12px 0 0;text-align:center;}
+
+.comp-table td.col-agent{background:var(--accent-soft);font-weight:600;text-align:center;}
+
+  .agent-wrap,.contact-wrap{grid-template-columns:1fr;gap:40px;}
+
+  .agent-hero{padding:80px 18px 64px;}
+
+</style>
+
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Tech Solutions home">
+      <svg width="28" height="28" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <g stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round">
+          <line x1="40" y1="40" x2="20" y2="20"/><line x1="40" y1="40" x2="62" y2="16"/>
+          <line x1="40" y1="40" x2="64" y2="62"/><line x1="40" y1="40" x2="22" y2="60"/>
+        </g>
+        <circle cx="20" cy="20" r="7" fill="var(--accent)"/><circle cx="62" cy="16" r="7" fill="var(--accent)"/>
+        <circle cx="64" cy="62" r="7" fill="var(--accent)"/><circle cx="22" cy="60" r="7" fill="var(--accent)"/>
+        <circle cx="40" cy="40" r="8.5" fill="var(--clay)"/>
+      </svg>
+      Tech Solutions
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#usecases">Use cases</a>
+      <a href="#agent">Your Agent</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="#contact" class="btn btn-primary" style="font-size:14px;padding:10px 20px;">Book a free call</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Your Agent Hero ── -->
+<section class="agent-hero" id="agent-hero">
+  <div style="position:relative;z-index:1;">
+    <h1>The AI agent built for<br><em>your business,</em> ready in days</h1>
+    <p class="sub">Your Agent answers every call, books appointments, captures leads, and automates the busywork — trained on your business, working around the clock.</p>
+    <a href="#contact" class="agent-hero-cta">
+      Meet Your Agent
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+    <p class="agent-hero-trust">Trusted by <strong>200+ local businesses</strong> &middot; No contracts &middot; Live in days</p>
+  </div>
+</section>
+
+<!-- ── Stats bar ── -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stat-item"><div class="snum">24/7</div><div class="slbl">Always answering</div></div>
+    <div class="stat-item"><div class="snum">&lt;2s</div><div class="slbl">Average pickup</div></div>
+    <div class="stat-item"><div class="snum">&infin;</div><div class="slbl">Simultaneous calls</div></div>
+    <div class="stat-item"><div class="snum">0</div><div class="slbl">Calls to voicemail</div></div>
+  </div>
+</div>
+
+<!-- ── Marquee ── -->
+<div class="marquee-wrap" aria-label="Technologies we work with">
+  <div class="marquee-inner" aria-hidden="true">
+    <span>AWS</span><span>Microsoft</span><span>Cisco</span><span>Ubiquiti</span>
+    <span>Google Cloud</span><span>Twilio</span><span>HubSpot</span><span>Ring</span>
+    <span>QuickBooks</span><span>Google Workspace</span><span>Microsoft 365</span>
+    <span>AWS</span><span>Microsoft</span><span>Cisco</span><span>Ubiquiti</span>
+    <span>Google Cloud</span><span>Twilio</span><span>HubSpot</span><span>Ring</span>
+    <span>QuickBooks</span><span>Google Workspace</span><span>Microsoft 365</span>
+  </div>
+</div>
+
+<!-- ── Use cases ── -->
+<section class="usecases" id="usecases">
+  <div class="wrap" style="margin-bottom:40px;">
+    <div class="section-label">Use cases</div>
+    <h2 class="section-title">Give Your Agent a job</h2>
+    <p class="section-sub">Tell it what you need — it handles the rest, around the clock.</p>
+  </div>
+  <div class="cases-scroll">
+    <div class="case-card reveal d1">
+      <div class="case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <h3>After-hours calls answered</h3>
+      <p style="font-size:14px;color:var(--ink-2);line-height:1.6;">Your Agent picks up every call the moment it rings — 2am or Sunday afternoon — books the job, and texts you the details.</p>
+      <div class="case-prompt">My AC just quit, do you have any openings this week?</div>
+    </div>
+    <div class="case-card reveal d2">
+      <div class="case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+      <h3>Appointments booked while you sleep</h3>
+      <p style="font-size:14px;color:var(--ink-2);line-height:1.6;">Your Agent syncs with your calendar, offers real open slots, confirms bookings, and sends reminders — no staff needed.</p>
+      <div class="case-prompt">Can I schedule a consultation for next Tuesday morning?</div>
+    </div>
+    <div class="case-card reveal d3">
+      <div class="case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <h3>Leads qualified automatically</h3>
+      <p style="font-size:14px;color:var(--ink-2);line-height:1.6;">Your Agent gathers job type, address, and budget — so you only spend time on customers who are ready to buy.</p>
+      <div class="case-prompt">How much does a full rewire cost for a 3-bed house?</div>
+    </div>
+    <div class="case-card reveal d4">
+      <div class="case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+      <h3>Security alerts that matter</h3>
+      <p style="font-size:14px;color:var(--ink-2);line-height:1.6;">AI cameras that tell a person from a car or package — you get alerts that matter, not a flood of noise.</p>
+      <div class="case-prompt">Alert me only when a person enters after 9pm, ignore cars.</div>
+    </div>
+    <div class="case-card reveal d5">
+      <div class="case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <h3>Follow-ups on autopilot</h3>
+      <p style="font-size:14px;color:var(--ink-2);line-height:1.6;">Automate quoting, follow-up sequences, and email triage — and generate a month of social content in minutes.</p>
+      <div class="case-prompt">Send a follow-up to every quote that hasn't replied in 3 days.</div>
+    </div>
+    <div class="case-card reveal d6">
+      <div class="case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <h3>Social content, written for you</h3>
+      <p style="font-size:14px;color:var(--ink-2);line-height:1.6;">Your Agent drafts posts, captions, and responses based on your voice and industry — ready to publish in one click.</p>
+      <div class="case-prompt">Write a week of Instagram posts about our spring HVAC tune-up special.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature badges — "The power of Your Agent" ── -->
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <div class="section-label">Why Tech Solutions</div>
+      <h2 class="section-title">The power of Your Agent</h2>
+      <p class="section-sub">We don't hand you a login and disappear. We build it into your business and keep it running.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card reveal d1">
+        <div class="feat-badge">📞</div>
+        <h3>Always answering</h3>
+        <p>Your Agent works around the clock — nights, weekends, holidays. It never calls in sick and never misses a call.</p>
+      </div>
+      <div class="feat-card reveal d2">
+        <div class="feat-badge">📅</div>
+        <h3>Books appointments</h3>
+        <p>This isn't a chatbot that gives suggestions. Your Agent books real slots, sends confirmations, and logs the lead.</p>
+      </div>
+      <div class="feat-card reveal d3">
+        <div class="feat-badge">🎯</div>
+        <h3>Captures every lead</h3>
+        <p>Every caller's name, number, and need is captured and texted to you — even if it can't fully answer the question.</p>
+      </div>
+      <div class="feat-card reveal d4">
+        <div class="feat-badge">🧠</div>
+        <h3>Learns your business</h3>
+        <p>Your services, your hours, your voice. Your Agent sounds like your team from day one — not a generic bot.</p>
+      </div>
+      <div class="feat-card reveal d5">
+        <div class="feat-badge">📍</div>
+        <h3>Works where you work</h3>
+        <p>Phone calls, texts, web chat. Your Agent meets customers wherever they reach out — all managed in one place.</p>
+      </div>
+      <div class="feat-card reveal d6">
+        <div class="feat-badge">🔒</div>
+        <h3>Secure by default</h3>
+        <p>Encrypted, permission-based, and built on a hardened network. Your customer data stays yours — always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Your Agent demo ── -->
+<section class="agent-section" id="agent">
+  <div class="wrap agent-wrap">
+    <div class="agent-text reveal">
+      <div class="eyetag">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Meet Your Agent
+      </div>
+      <h2>Your Agent never sleeps, and never misses a call.</h2>
+      <p>Every missed call is a lost job. Your Agent answers instantly — day or night — sounds human, books appointments straight into your calendar, and texts you the leads that matter.</p>
+      <p>Set up once, trained on your business, running around the clock for less than a day of a part-time receptionist's wages.</p>
+      <div class="agent-stats">
+        <div class="astat"><div class="num">24/7</div><div class="lbl">always answering</div></div>
+        <div class="astat"><div class="num">&lt;1s</div><div class="lbl">pickup time</div></div>
+        <div class="astat"><div class="num">0</div><div class="lbl">missed leads</div></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="chat-window">
+        <div class="chat-topbar">
+          <div class="chat-av">
+            <svg width="18" height="18" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+              <g stroke="#fff" stroke-width="5" stroke-linecap="round">
+                <line x1="40" y1="40" x2="20" y2="20"/><line x1="40" y1="40" x2="62" y2="16"/>
+                <line x1="40" y1="40" x2="64" y2="62"/><line x1="40" y1="40" x2="22" y2="60"/>
+              </g>
+              <circle cx="20" cy="20" r="6" fill="#fff"/><circle cx="62" cy="16" r="6" fill="#fff"/>
+              <circle cx="64" cy="62" r="6" fill="#fff"/><circle cx="22" cy="60" r="6" fill="#fff"/>
+              <circle cx="40" cy="40" r="8" fill="#C9743E"/>
+            </svg>
+          </div>
+          <div>
+            <div class="chat-name">Your Agent</div>
+            <div class="chat-status"><span class="online-dot"></span>online now</div>
+          </div>
+          <div class="chat-tag">incoming · 9:47 PM</div>
+        </div>
+        <div class="chat-body">
+          <div class="bubble them"><span class="who">Caller</span>Hey, do y'all have any openings this week? My AC just quit.</div>
+          <div class="bubble ai"><span class="who">Your Agent</span>Sorry to hear that! We can get a tech out tomorrow. I've got 8–10 AM or 1–3 PM open — which works?</div>
+          <div class="bubble them"><span class="who">Caller</span>Morning's better.</div>
+          <div class="bubble ai"><span class="who">Your Agent</span>Booked for 8–10 AM. Can I grab your name, address, and a number to text the confirmation?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Integrations line ── -->
+<div class="integrations-line">
+  <p><strong>Your Agent connects to everything you already use</strong> — calendar, CRM, phone system, and more. All configured through conversation, with no code and no IT headaches.</p>
+</div>
+
+<!-- ── Comparison ── -->
+<section class="comparison">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <div class="section-label">The numbers</div>
+      <h2 class="section-title">Your Agent vs. a Human Receptionist</h2>
+      <p class="section-sub">The same job, done better, for a fraction of the cost.</p>
+    </div>
+    <div class="comp-wrap reveal">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th class="col-feat"></th>
+            <th class="col-human">Human Receptionist</th>
+            <th class="col-agent">Your Agent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="col-feat">Availability</td><td class="col-human"><span class="xmark">✕</span>9–5, weekdays only</td><td class="col-agent"><span class="cmark">✓</span>24/7/365</td></tr>
+          <tr><td class="col-feat">Monthly cost</td><td class="col-human"><span class="xmark">✕</span>$3,000–$5,000+</td><td class="col-agent"><span class="cmark">✓</span>Fraction of the cost</td></tr>
+          <tr><td class="col-feat">Sick days &amp; turnover</td><td class="col-human"><span class="xmark">✕</span>Yes — coverage gaps</td><td class="col-agent"><span class="cmark">✓</span>Never</td></tr>
+          <tr><td class="col-feat">Simultaneous calls</td><td class="col-human"><span class="xmark">✕</span>One at a time</td><td class="col-agent"><span class="cmark">✓</span>Unlimited</td></tr>
+          <tr><td class="col-feat">Lead summaries</td><td class="col-human"><span class="xmark">✕</span>Manual notes</td><td class="col-agent"><span class="cmark">✓</span>Auto after every call</td></tr>
+          <tr><td class="col-feat">Setup time</td><td class="col-human"><span class="xmark">✕</span>Weeks of hiring</td><td class="col-agent"><span class="cmark">✓</span>Live in days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── Industries ── -->
+<section class="industries" id="industries">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <div class="section-label">Built for your industry</div>
+      <h2 class="section-title">Works for businesses like yours</h2>
+      <p class="section-sub">Trained on your services, your hours, your voice — sounds like your business from day one.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal d1">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h4>Medical &amp; Dental</h4>
+        <p>Answer every patient call after hours, confirm appointments, reduce no-shows.</p>
+      </div>
+      <div class="ind-card reveal d2">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h4>HVAC &amp; Trades</h4>
+        <p>Capture emergency calls at 2am, book dispatch slots, never lose a job to voicemail.</p>
+      </div>
+      <div class="ind-card reveal d3">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
+        <h4>Law Firms</h4>
+        <p>Qualify leads and schedule consultations so attorneys only talk to ready clients.</p>
+      </div>
+      <div class="ind-card reveal d4">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></div>
+        <h4>Property Management</h4>
+        <p>Route maintenance requests, answer tenants 24/7, log every interaction.</p>
+      </div>
+      <div class="ind-card reveal d5">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+        <h4>Restaurants &amp; Hospitality</h4>
+        <p>Handle reservations, takeout, and hours so your team focuses on guests.</p>
+      </div>
+      <div class="ind-card reveal d6">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h4>Retail &amp; Services</h4>
+        <p>Answer product questions, book appointments, follow up on quotes — automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Process ── -->
+<section class="process-section" id="process">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <div class="section-label">How it works</div>
+      <h2 class="section-title">Live in three steps</h2>
+      <p class="section-sub">Most businesses are up and running within a week.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal d1">
+        <div class="step-num">01</div>
+        <h3>Walkthrough</h3>
+        <p>A quick call to understand your business, where you're losing time or leads, and what's already in place.</p>
+      </div>
+      <div class="process-step reveal d2">
+        <div class="step-num">02</div>
+        <h3>Build &amp; train</h3>
+        <p>Your Agent is configured and trained on your services, hours, and voice — then tested until it sounds right.</p>
+      </div>
+      <div class="process-step reveal d3">
+        <div class="step-num">03</div>
+        <h3>Go live &amp; handoff</h3>
+        <p>It goes live, explained in plain terms — and there's a real person to call when you need a change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Does Your Agent actually sound human?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes. Your Agent uses natural-sounding AI voice trained specifically on your services, your language, and your business — not a generic script. Most callers don't know they're talking to an AI unless you tell them.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How long does setup take?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Most businesses are live within 2–5 days. We handle all the configuration, training, and testing — you just review and approve before it goes live.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do I need a long-term contract?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>No long-term contracts. We earn your business month to month. If it's not working for you, you can cancel — no penalties.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What happens if Your Agent can't answer a question?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Your Agent is configured with a fallback: it collects the caller's name and number, tells them someone will follow up, and sends you a text summary immediately. No lead is ever lost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What does it cost?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Pricing is tailored to your business and what you need — a solo HVAC operator has different needs than a dental group. Book a free walkthrough and we'll send you an exact quote, usually within 24 hours.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can it handle multiple calls at once?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes — unlimited simultaneous calls. Whether you get 1 call or 100 at the same time, Your Agent answers every single one instantly, with no hold times and no busy signals.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Final CTA ── -->
+<div class="cta-banner">
+  <div class="wrap">
+    <h2>Your Agent is waiting for you.</h2>
+    <p>Book a free walkthrough — we'll scope your setup and send a quote within 24 hours.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-primary btn-lg">Book a free walkthrough</a>
+      <a href="#agent" class="btn btn-outline btn-lg">See how it works &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Contact ── -->
+<section class="contact" id="contact">
+  <div class="wrap contact-wrap">
+    <div class="contact-left reveal">
+      <div class="section-label">Get started</div>
+      <h2>Stop losing leads to a phone nobody answers.</h2>
+      <p>Tell us what you need — AI agent, smart security, automation, or IT — and we'll follow up within one business day.</p>
+      <div class="contact-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>No contracts — cancel any time</span></div>
+      <div class="contact-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Live in days, not weeks</span></div>
+      <div class="contact-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Real human support behind every system</span></div>
+    </div>
+    <div class="reveal d2">
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-name">Your name</label>
+            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="f-phone">Phone number</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="f-email">Email address</label>
+          <input type="email" id="f-email" name="email" placeholder="jane@yourbusiness.com" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="f-business">Business name</label>
+          <input type="text" id="f-business" name="business" placeholder="Your Business LLC" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="f-service">I'm interested in</label>
+          <select id="f-service" name="service">
+            <option value="">Select a service…</option>
+            <option value="agent">AI phone agent</option>
+            <option value="security">Smart security &amp; cameras</option>
+            <option value="automation">Automation &amp; AI content</option>
+            <option value="it">IT &amp; cybersecurity</option>
+            <option value="multiple">Multiple services</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="f-message">Anything else?</label>
+          <textarea id="f-message" name="message" placeholder="Tell us about your business or what you're trying to solve."></textarea>
+        </div>
+        <button type="submit" id="submit-btn">
+          <span id="submit-text">Request a quote</span>
+          <svg id="submit-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="display:none;animation:spin .7s linear infinite;" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </button>
+      </form>
+      <div class="form-success" id="form-success">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>We'll be in touch soon!</h3>
+        <p>Thanks for reaching out. We typically respond within one business day. You can also email us at <a href="mailto:hello@techsolutions.com" style="color:var(--accent);font-weight:600;">hello@techsolutions.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="display:flex;align-items:center;gap:9px;font-size:17px;font-weight:700;letter-spacing:-0.02em;margin-bottom:12px;">
+          <svg width="26" height="26" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <g stroke="#5FCDA9" stroke-width="4.5" stroke-linecap="round">
+              <line x1="40" y1="40" x2="20" y2="20"/><line x1="40" y1="40" x2="62" y2="16"/>
+              <line x1="40" y1="40" x2="64" y2="62"/><line x1="40" y1="40" x2="22" y2="60"/>
+            </g>
+            <circle cx="20" cy="20" r="7" fill="#5FCDA9"/><circle cx="62" cy="16" r="7" fill="#5FCDA9"/>
+            <circle cx="64" cy="62" r="7" fill="#5FCDA9"/><circle cx="22" cy="60" r="7" fill="#5FCDA9"/>
+            <circle cx="40" cy="40" r="8.5" fill="var(--clay)"/>
+          </svg>
+          Tech Solutions
+        </div>
+        <p class="blurb">Intelligent systems, automation, and AI — built secure and built to last.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#usecases">AI phone agent</a>
+        <a href="#usecases">Smart security</a>
+        <a href="#usecases">Automation</a>
+        <a href="#usecases">IT &amp; cybersecurity</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#process">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:hello@techsolutions.com">hello@techsolutions.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Tech Solutions. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  // ── Mobile nav ──
+  var navToggle=document.getElementById('nav-toggle'),mainNav=document.getElementById('main-nav');
+  if(navToggle&&mainNav){
+    navToggle.addEventListener('click',function(){
+      var open=mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open);
+    });
+    mainNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mainNav.classList.remove('open');navToggle.setAttribute('aria-expanded','false');});});
+    document.addEventListener('click',function(e){if(!mainNav.contains(e.target)&&!navToggle.contains(e.target)){mainNav.classList.remove('open');navToggle.setAttribute('aria-expanded','false');}});
+  }
+
+  // ── Nav active on scroll ──
+  var navLinks=document.querySelectorAll('nav a[href^="#"]');
+  if(navLinks.length&&window.IntersectionObserver){
+    var nObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id);});});},{rootMargin:'-35% 0px -60% 0px'});
+    navLinks.forEach(function(a){var el=document.getElementById(a.getAttribute('href').slice(1));if(el)nObs.observe(el);});
+  }
+
+  // ── Scroll reveal ──
+  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(!reduceMotion&&window.IntersectionObserver){
+    var revEls=document.querySelectorAll('.reveal');
+    var rObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+    revEls.forEach(function(el){rObs.observe(el);});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+
+  // ── FAQ ──
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.closest('.faq-item');
+      var open=item.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open);
+    });
+  });
+
+  // ── Contact form ──
+  var form=document.getElementById('contact-form'),formSuccess=document.getElementById('form-success'),submitBtn=document.getElementById('submit-btn'),submitText=document.getElementById('submit-text'),submitSpinner=document.getElementById('submit-spinner');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){form.reportValidity();return;}
+      submitBtn.disabled=true;submitText.textContent='Sending…';submitSpinner.style.display='block';
+      var FORM_ENDPOINT=''; // Add Formspree/Netlify endpoint here
+      function showSuccess(){form.style.display='none';formSuccess.style.display='block';}
+      if(FORM_ENDPOINT){
+        var payload={};new FormData(form).forEach(function(v,k){payload[k]=v;});
+        fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+        .then(function(r){if(r.ok)showSuccess();else throw new Error();})
+        .catch(function(){window.location.href='mailto:hello@techsolutions.com?subject=Quote+request';submitBtn.disabled=false;submitText.textContent='Request a quote';submitSpinner.style.display='none';});
+      } else {setTimeout(showSuccess,800);}
+    });
+  }
+})();
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
