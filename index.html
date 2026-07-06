@@ -138,6 +138,26 @@ nav a:hover,nav a.active{color:var(--ink);}
 .chip.dark{background:var(--ink);border-color:var(--ink);color:#fff;}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--tilt,0deg))}50%{transform:translateY(-16px) rotate(var(--tilt,0deg))}}
 .hero .wrap{position:relative;z-index:1;}
+/* reeded liquid-glass panel */
+.hero-glass{
+  display:none;
+  position:absolute;top:0;bottom:0;right:0;
+  width:min(19vw,260px);z-index:2;pointer-events:none;
+  backdrop-filter:blur(5px) saturate(1.2) contrast(1.04);
+  -webkit-backdrop-filter:blur(5px) saturate(1.2) contrast(1.04);
+  background:repeating-linear-gradient(90deg,
+    rgba(255,255,255,0.34) 0px 3px,
+    rgba(255,255,255,0.07) 3px 11px,
+    rgba(10,10,10,0.045) 11px 13px,
+    rgba(255,255,255,0.14) 13px 22px);
+  border-left:1px solid rgba(255,255,255,0.55);
+  box-shadow:-18px 0 40px -20px rgba(10,10,10,0.18);
+}
+.hero-glass::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,0.28),transparent 30%,transparent 72%,rgba(255,255,255,0.18));
+}
+@media(min-width:1280px){.hero-glass{display:block;}}
 
 /* ── Photos ── */
 .photo{
@@ -550,6 +570,7 @@ footer .blurb{color:rgba(255,255,255,0.42);font-size:14px;max-width:300px;line-h
 
 <!-- ── Hero ── -->
 <section class="hero">
+  <div class="hero-glass" aria-hidden="true"></div>
   <div class="chips" aria-hidden="true">
     <span class="chip lime" style="top:14%;right:4%;--tilt:-6deg;animation-delay:0s;">Soil moisture</span>
     <span class="chip" style="top:38%;right:3%;--tilt:4deg;animation-delay:1.2s;">Irrigation</span>
