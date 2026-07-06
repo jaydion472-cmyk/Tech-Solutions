@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 
 /* ── Design Tokens: soil, leaf, harvest ── */
@@ -42,7 +42,7 @@ html{scroll-behavior:smooth;}
 body{
   background:var(--bg);
   color:var(--ink);
-  font-family:'Instrument Sans',sans-serif;
+  font-family:'Funnel Display',sans-serif;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
@@ -55,7 +55,7 @@ img{display:block;max-width:100%;}
   display:inline-flex;align-items:center;gap:10px;
   font-weight:600;font-size:15px;
   border-radius:10px;padding:14px 28px;
-  cursor:pointer;border:none;font-family:'Instrument Sans',sans-serif;
+  cursor:pointer;border:none;font-family:'Funnel Display',sans-serif;
   transition:background .2s,color .2s,border-color .2s;
 }
 .btn-amber{background:var(--amber);color:var(--leaf);}
@@ -78,12 +78,12 @@ header .wrap{
   height:74px;
 }
 .logo{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:19px;font-weight:600;
   display:flex;align-items:center;gap:10px;
   letter-spacing:-0.01em;color:var(--leaf);
 }
-.logo em{font-style:italic;color:var(--soil);}
+.logo em{font-style:normal;color:var(--soil);}
 nav{display:flex;gap:28px;}
 nav a{
   font-size:14.5px;color:var(--text);font-weight:500;
@@ -121,20 +121,20 @@ nav a:hover,nav a.active{color:var(--leaf);}
 }
 .hc-content .wrap{width:100%;}
 .hc-kicker{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;
   color:var(--amber);margin-bottom:18px;
   display:flex;align-items:center;gap:12px;
 }
 .hc-kicker::before{content:'';width:34px;height:1.5px;background:var(--amber);}
 .hc-content h1{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:clamp(36px,4.8vw,64px);
   font-weight:600;line-height:1.06;
   letter-spacing:-0.015em;color:#fff;
   max-width:640px;margin-bottom:20px;
 }
-.hc-content h1 em{font-style:italic;color:var(--amber);}
+.hc-content h1 em{font-style:normal;color:var(--amber);}
 .hc-content .sub{
   font-size:16.5px;color:rgba(245,241,232,0.85);
   max-width:480px;line-height:1.7;margin-bottom:30px;
@@ -176,14 +176,14 @@ nav a:hover,nav a.active{color:var(--leaf);}
 }
 .claim:last-child{border-right:none;}
 .claim .big{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:clamp(30px,3.2vw,44px);
   font-weight:600;letter-spacing:-0.015em;
   color:var(--leaf);line-height:1.1;
 }
-.claim .big em{font-style:italic;color:var(--amber-dark);}
+.claim .big em{font-style:normal;color:var(--amber-dark);}
 .claim h2{
-  font-family:'Instrument Sans',sans-serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:14.5px;font-weight:600;
   margin-top:10px;color:var(--ink);
 }
@@ -193,17 +193,17 @@ nav a:hover,nav a.active{color:var(--leaf);}
 section{padding:var(--pad) 0;}
 .sec-head-center{text-align:center;max-width:760px;margin:0 auto 56px;}
 .sec-kicker{
-  font-family:'Fraunces',serif;
-  font-style:italic;font-size:19px;
+  font-family:'Funnel Display',sans-serif;
+  font-style:normal;font-size:19px;
   color:var(--soil);display:block;margin-bottom:10px;
 }
 h2.sec-title{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:clamp(30px,4vw,48px);
   font-weight:600;letter-spacing:-0.015em;
   line-height:1.1;color:var(--leaf);
 }
-h2.sec-title em{font-style:italic;color:var(--soil);}
+h2.sec-title em{font-style:normal;color:var(--soil);}
 .sec-sub{font-size:16px;color:var(--text);line-height:1.75;margin-top:16px;}
 
 /* ── Numbered accordion (climate.com format) ── */
@@ -226,7 +226,7 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   box-shadow:0 16px 40px -16px rgba(38,34,27,0.3);
 }
 .dcard .dlabel{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--soil);margin-bottom:8px;
 }
@@ -236,12 +236,12 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   width:100%;background:none;border:none;cursor:pointer;
   display:flex;align-items:center;gap:18px;
   padding:26px 0;text-align:left;
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:clamp(19px,2vw,24px);font-weight:600;
   color:var(--leaf);letter-spacing:-0.005em;line-height:1.25;
 }
 .acc-num{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:13px;color:var(--amber-dark);
   letter-spacing:0.08em;flex:none;
 }
@@ -283,13 +283,13 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   text-align:center;
 }
 .impact-card .big{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:clamp(40px,4.2vw,56px);
   font-weight:600;letter-spacing:-0.02em;
   color:var(--amber);line-height:1;
 }
 .impact-card h3{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:18px;font-weight:600;margin:14px 0 8px;color:var(--bg);
 }
 .impact-card p{font-size:14px;color:rgba(245,241,232,0.6);line-height:1.7;}
@@ -312,14 +312,14 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
 .watch-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px -18px rgba(38,34,27,0.22);}
 .watch-card svg{width:25px;height:25px;color:var(--soil);margin-bottom:16px;}
 .watch-card h3{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:19px;font-weight:600;letter-spacing:-0.01em;margin-bottom:8px;color:var(--leaf);
 }
 .watch-card p{font-size:14px;color:var(--text);line-height:1.7;}
 .watch-card .spec{
   margin-top:16px;padding-top:12px;
   border-top:1px dashed var(--border);
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:11px;color:var(--soil);letter-spacing:0.02em;line-height:1.8;
 }
 .honesty-inner{
@@ -331,7 +331,7 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   font-size:15px;color:var(--ink);line-height:1.8;
   max-width:800px;
 }
-.honesty-inner em{font-family:'Fraunces',serif;}
+.honesty-inner em{font-family:'Funnel Display',sans-serif;}
 
 /* ── FAQ ── */
 .faq{background:var(--bg-2);}
@@ -345,7 +345,7 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   max-width:400px;
 }
 .faq-art .dlabel{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--soil);margin-bottom:10px;
 }
@@ -355,7 +355,7 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   width:100%;background:none;border:none;cursor:pointer;
   display:flex;justify-content:space-between;align-items:center;
   padding:24px 0;text-align:left;
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:18.5px;font-weight:600;color:var(--leaf);
   gap:20px;letter-spacing:-0.005em;line-height:1.3;
 }
@@ -380,18 +380,18 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
   padding:64px 0;text-align:center;
 }
 .prefooter h6{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
   color:var(--leaf);opacity:.75;margin-bottom:14px;font-weight:500;
 }
 .prefooter h2{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:clamp(26px,3.4vw,42px);
   font-weight:600;letter-spacing:-0.015em;
   line-height:1.12;color:var(--leaf);
   max-width:720px;margin:0 auto 30px;
 }
-.prefooter h2 em{font-style:italic;}
+.prefooter h2 em{font-style:normal;}
 
 /* ── Contact (dark leaf) ── */
 .contact-sec{background:var(--leaf);color:var(--bg);position:relative;}
@@ -405,7 +405,7 @@ h2.sec-title em{font-style:italic;color:var(--soil);}
 .contact-sec .wrap{position:relative;z-index:1;}
 .contact-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start;}
 .contact-grid h3{
-  font-family:'Fraunces',serif;
+  font-family:'Funnel Display',sans-serif;
   font-size:25px;font-weight:600;margin-bottom:14px;
 }
 .cta-photo{
@@ -425,7 +425,7 @@ form{display:flex;flex-direction:column;gap:14px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-field{display:flex;flex-direction:column;gap:7px;}
 .form-field label{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
   color:rgba(245,241,232,0.5);
 }
@@ -434,7 +434,7 @@ form input,form textarea,form select{
   border:1.5px solid var(--border-dark);
   border-radius:var(--radius-sm);
   padding:13px 16px;color:var(--bg);
-  font-family:'Instrument Sans',sans-serif;font-size:14.5px;
+  font-family:'Funnel Display',sans-serif;font-size:14.5px;
   transition:border-color .18s;
 }
 form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--amber);}
@@ -450,7 +450,7 @@ form button[type="submit"]{
   background:var(--amber);color:var(--leaf);border:none;
   padding:16px;border-radius:10px;
   font-size:15px;font-weight:700;cursor:pointer;
-  font-family:'Instrument Sans',sans-serif;
+  font-family:'Funnel Display',sans-serif;
   transition:background .18s,color .18s;
   display:flex;align-items:center;justify-content:center;gap:8px;
 }
@@ -462,7 +462,7 @@ form button[type="submit"]:disabled{opacity:.55;cursor:default;}
   text-align:center;display:none;
 }
 .form-success svg{color:var(--amber);margin:0 auto 14px;display:block;}
-.form-success h3{font-family:'Fraunces',serif;font-size:20px;margin-bottom:8px;}
+.form-success h3{font-family:'Funnel Display',sans-serif;font-size:20px;margin-bottom:8px;}
 .form-success p{font-size:14.5px;color:rgba(245,241,232,0.65);}
 
 /* ── Footer ── */
@@ -475,7 +475,7 @@ footer .logo{color:var(--bg);margin-bottom:16px;}
 footer .logo em{color:var(--amber);}
 footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-height:1.75;}
 .foot-col h3{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Funnel Display',sans-serif;
   font-size:11px;text-transform:uppercase;letter-spacing:0.12em;
   color:var(--soil);margin-bottom:16px;font-weight:500;
 }
