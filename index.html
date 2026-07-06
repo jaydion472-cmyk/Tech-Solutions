@@ -139,6 +139,26 @@ nav a:hover,nav a.active{color:var(--ink);}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--tilt,0deg))}50%{transform:translateY(-16px) rotate(var(--tilt,0deg))}}
 .hero .wrap{position:relative;z-index:1;}
 
+/* ── Photos ── */
+.photo{
+  border-radius:var(--radius);overflow:hidden;
+  border:1.5px solid var(--light-border);
+  background:#E9E9E9;
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.gaps-left .photo{margin-top:34px;max-width:440px;aspect-ratio:4/3;}
+.photo-band{
+  max-width:1220px;margin:0 auto;padding:0 32px 104px;
+}
+.photo-band .photo{aspect-ratio:21/8;}
+.cta-photo{
+  border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--dark-border);
+  aspect-ratio:16/10;margin-bottom:28px;max-width:440px;
+}
+.cta-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+@media(max-width:560px){.photo-band{padding:0 20px 80px;}}
+
 /* ── Marquee ── */
 .marquee{
   background:var(--ink);color:#fff;
@@ -574,6 +594,9 @@ footer .blurb{color:rgba(255,255,255,0.42);font-size:14px;max-width:300px;line-h
       <h2 class="sec-title display">Most farmland is a blind spot. Ours isn't.</h2>
       <p>Poor cell coverage, no power in the fields, decisions made on habit and hope. Small battery-powered sensors send readings over kilometres to one gateway on your farm — and on to your phone as charts and SMS/WhatsApp alerts.</p>
       <a href="#contact" class="btn btn-dark">Book a free farm walkthrough</a>
+      <div class="photo">
+        <img src="https://live.staticflickr.com/566/22436376226_8779dceb29_b.jpg" alt="A woman farmer standing in her maize field" loading="lazy">
+      </div>
     </div>
     <div>
       <div class="gap-item reveal">
@@ -594,6 +617,13 @@ footer .blurb{color:rgba(255,255,255,0.42);font-size:14px;max-width:300px;line-h
     </div>
   </div>
 </section>
+
+<!-- ── Photo band ── -->
+<div class="photo-band">
+  <div class="photo reveal">
+    <img src="https://pd.w.org/2026/01/841695a265d133373.34113895-2048x1536.jpg" alt="Young maize plants growing in a healthy green field in rural Kenya" loading="lazy">
+  </div>
+</div>
 
 <!-- ── Marquee 2 ── -->
 <div class="marquee" aria-hidden="true">
@@ -776,6 +806,9 @@ footer .blurb{color:rgba(255,255,255,0.42);font-size:14px;max-width:300px;line-h
     </div>
     <div class="cta-form-wrap" id="contact-form">
       <div class="reveal">
+        <div class="cta-photo">
+          <img src="https://live.staticflickr.com/598/21841285003_4c034a577e_b.jpg" alt="A farmer inspecting maize plants in his field" loading="lazy">
+        </div>
         <h3>Start with a conversation, not a contract.</h3>
         <p class="contact-note">Tell us a little about your farm and what you're trying to fix. We reply within one business day, usually with a few questions and a suggested next step.</p>
         <div class="cta-badges">
@@ -892,6 +925,7 @@ footer .blurb{color:rgba(255,255,255,0.42);font-size:14px;max-width:300px;line-h
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 FarmTech Solutions. All rights reserved.</span>
+      <span>Farmer photos: <a href="https://www.flickr.com/photo.gne?id=22436376226" target="_blank" rel="noopener" style="text-decoration:underline;">sicrump</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener" style="text-decoration:underline;">CC BY 2.0</a>)</span>
       <span>Built on the open LoRaWAN standard.</span>
     </div>
   </div>
