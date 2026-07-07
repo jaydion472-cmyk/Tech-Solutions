@@ -105,6 +105,14 @@ nav a{
 }
 nav a:hover,nav a.active{color:var(--leaf);}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--leaf);}
+.head-lines{
+  display:flex;flex-direction:column;text-align:right;line-height:1.5;
+}
+.head-lines a{
+  font-size:12.5px;color:var(--text);font-weight:600;
+  transition:color .15s;
+}
+.head-lines a:hover{color:var(--leaf);}
 
 /* ── Hero carousel (full-bleed, climate.com format) ── */
 .hero-carousel{
@@ -581,6 +589,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   nav a{padding:13px 32px;}
   .nav-toggle{display:block;}
   header .btn{display:none;}
+  .head-lines{display:none;}
   .form-row{grid-template-columns:1fr;}
 }
 @media(max-width:560px){
@@ -624,8 +633,13 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <a href="#watch">What we monitor</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a href="#contact" class="btn btn-leaf" style="font-size:14px;padding:11px 20px;">Talk to us</a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="head-lines">
+        <a href="tel:+12524203078">Call +1 252 420 3078</a>
+        <a href="https://wa.me/12524203078" target="_blank" rel="noopener">WhatsApp +1 252 420 3078</a>
+        <a href="mailto:hello@techsolutionsagents.com">hello@techsolutionsagents.com</a>
+      </div>
+      <a href="#contact" class="btn btn-leaf" style="font-size:14px;padding:11px 20px;">Contact us</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
@@ -1008,7 +1022,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             </div>
             <div class="form-field">
               <label for="f-phone">Phone / WhatsApp</label>
-              <input type="tel" id="f-phone" name="phone" placeholder="+237 ..." autocomplete="tel">
+              <input type="tel" id="f-phone" name="phone" placeholder="+1 ..." autocomplete="tel">
             </div>
           </div>
           <div class="form-field">
