@@ -1003,6 +1003,9 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       </div>
       <div class="reveal d2">
         <form id="contact-form-el" novalidate>
+          <input type="hidden" name="_subject" value="New enquiry from the TechSolutions Agents site">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-row">
             <div class="form-field">
               <label for="f-name">Your name</label>
@@ -1186,7 +1189,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       e.preventDefault();
       if(!form.checkValidity()){form.reportValidity();return;}
       submitBtn.disabled=true;submitText.textContent='Sending…';submitSpinner.style.display='block';
-      var FORM_ENDPOINT=''; // Add Formspree/Netlify endpoint here
+      var FORM_ENDPOINT='https://formsubmit.co/ajax/jaydion472@gmail.com';
       function showSuccess(){form.style.display='none';formSuccess.style.display='block';}
       if(FORM_ENDPOINT){
         var payload={};new FormData(form).forEach(function(v,k){payload[k]=v;});
