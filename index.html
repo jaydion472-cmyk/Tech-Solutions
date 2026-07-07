@@ -106,9 +106,10 @@ nav a{
 nav a:hover,nav a.active{color:var(--leaf);}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--leaf);}
 .contact-menu{position:relative;}
-.contact-trigger{display:inline-flex;align-items:center;gap:7px;cursor:pointer;}
-.contact-trigger svg{transition:transform .2s;}
-.contact-menu.open .contact-trigger svg{transform:rotate(180deg);}
+.contact-trigger{display:inline-flex;align-items:center;gap:7px;cursor:pointer;font-size:14px;padding:11px 20px;}
+.contact-trigger .contact-ico{display:none;}
+.contact-caret{transition:transform .2s;}
+.contact-menu.open .contact-caret{transform:rotate(180deg);}
 .contact-dropdown{
   position:absolute;top:calc(100% + 10px);right:0;
   min-width:262px;
@@ -604,6 +605,9 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   nav.open{display:flex;}
   nav a{padding:13px 32px;}
   .nav-toggle{display:block;}
+  .contact-trigger{padding:9px;gap:0;}
+  .contact-trigger .contact-label,.contact-trigger .contact-caret{display:none;}
+  .contact-trigger .contact-ico{display:block;width:20px;height:20px;}
   .contact-dropdown{min-width:230px;}
   .form-row{grid-template-columns:1fr;}
 }
@@ -650,9 +654,10 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     </nav>
     <div style="display:flex;align-items:center;gap:10px;">
       <div class="contact-menu" id="contact-menu">
-        <button type="button" class="btn btn-leaf contact-trigger" id="contact-btn" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" style="font-size:14px;padding:11px 20px;">
-          Contact us
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        <button type="button" class="btn btn-leaf contact-trigger" id="contact-btn" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" aria-label="Contact us">
+          <svg class="contact-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="contact-label">Contact us</span>
+          <svg class="contact-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="contact-dropdown" id="contact-dropdown" role="menu" aria-label="Contact options">
           <a role="menuitem" href="tel:+12524203078"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call +1 252 420 3078</a>
