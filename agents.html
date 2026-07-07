@@ -1048,7 +1048,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <div class="form-success" id="form-success">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
           <h3>Thanks, we've got it.</h3>
-          <p>We typically reply within one business day. You can also email us directly at <a href="mailto:hello@farmtechsolutions.com" style="color:var(--amber);font-weight:600;">hello@farmtechsolutions.com</a>.</p>
+          <p>We typically reply within one business day. You can also email us directly at <a href="mailto:hello@techsolutionsagents.com" style="color:var(--amber);font-weight:600;">hello@techsolutionsagents.com</a>.</p>
         </div>
       </div>
     </div>
@@ -1092,7 +1092,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <h3>Resources</h3>
         <a href="./">FarmTech Solutions: our smart farming line</a>
         <a href="#contact">Contact</a>
-        <a href="mailto:hello@farmtechsolutions.com">hello@farmtechsolutions.com</a>
+        <a href="mailto:hello@techsolutionsagents.com">hello@techsolutionsagents.com</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -1195,7 +1195,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         var payload={};new FormData(form).forEach(function(v,k){payload[k]=v;});
         fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
         .then(function(r){if(r.ok)showSuccess();else throw new Error();})
-        .catch(function(){window.location.href='mailto:hello@farmtechsolutions.com?subject=Farm+enquiry';submitBtn.disabled=false;submitText.textContent='Send message';submitSpinner.style.display='none';});
+        .catch(function(){window.location.href='mailto:hello@techsolutionsagents.com?subject=Farm+enquiry';submitBtn.disabled=false;submitText.textContent='Send message';submitSpinner.style.display='none';});
       } else {setTimeout(showSuccess,800);}
     });
   }
