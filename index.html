@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FarmTech Solutions — LoRaWAN Smart Farming | Soil, Irrigation &amp; Farm Monitoring</title>
+<title>FarmTech Solutions | LoRaWAN Smart Farming | Soil, Irrigation &amp; Farm Monitoring</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><g stroke='%232D3B2A' stroke-width='5' stroke-linecap='round'><line x1='40' y1='40' x2='20' y2='20'/><line x1='40' y1='40' x2='62' y2='16'/><line x1='40' y1='40' x2='64' y2='62'/><line x1='40' y1='40' x2='22' y2='60'/></g><circle cx='20' cy='20' r='8' fill='%232D3B2A'/><circle cx='62' cy='16' r='8' fill='%232D3B2A'/><circle cx='64' cy='62' r='8' fill='%232D3B2A'/><circle cx='22' cy='60' r='8' fill='%23D9A441'/><circle cx='40' cy='40' r='9' fill='%23D9A441'/></svg>">
-<meta name="description" content="FarmTech Solutions builds LoRaWAN sensor networks for farms — soil moisture, irrigation, weather, tanks, livestock and storage monitoring that works without cell coverage or mains power.">
-<meta property="og:title" content="FarmTech Solutions — LoRaWAN Smart Farming">
-<meta property="og:description" content="Your farm, readable from your phone — no cell towers required.">
+<meta name="description" content="FarmTech Solutions builds LoRaWAN sensor networks for farms: soil moisture, irrigation, weather, tanks, livestock and storage monitoring that works without cell coverage or mains power.">
+<meta property="og:title" content="FarmTech Solutions | LoRaWAN Smart Farming">
+<meta property="og:description" content="Your farm, readable from your phone. No cell towers required.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -388,6 +388,45 @@ h2.sec-title em{font-style:normal;color:var(--soil);}
 .faq-item.open .faq-a{max-height:420px;}
 .faq-a p{padding-bottom:24px;font-size:14.5px;color:var(--text);line-height:1.8;max-width:640px;}
 
+/* ── Feature story band (photo + headline result) ── */
+.story-card{
+  display:grid;grid-template-columns:5fr 6fr;
+  border:1.5px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;background:#FDFBF6;
+}
+.story-img{position:relative;min-height:320px;}
+.story-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.story-body{padding:46px 44px;display:flex;flex-direction:column;align-items:flex-start;}
+.story-tag{
+  font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--soil);margin-bottom:14px;font-weight:600;
+}
+.story-body h3{
+  font-family:'Funnel Display',sans-serif;
+  font-size:clamp(22px,2.6vw,32px);
+  font-weight:600;letter-spacing:-0.01em;line-height:1.15;
+  color:var(--leaf);margin-bottom:14px;
+}
+.story-body p{font-size:15px;color:var(--text);line-height:1.78;margin-bottom:26px;}
+.story-link{
+  margin-top:auto;
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:14.5px;font-weight:600;color:var(--amber-dark);
+  transition:gap .18s,color .18s;
+}
+.story-link:hover{gap:12px;color:var(--leaf);}
+.story-link svg{width:15px;height:15px;flex:none;}
+
+/* ── Statement band ── */
+.stateband{background:var(--leaf);color:var(--bg);padding:80px 0;text-align:center;}
+.stateband h2{
+  font-family:'Funnel Display',sans-serif;
+  font-size:clamp(26px,3.8vw,46px);
+  font-weight:600;letter-spacing:-0.015em;
+  line-height:1.15;max-width:900px;margin:0 auto;
+}
+.stateband h2 em{font-style:normal;color:var(--amber);}
+
 /* ── Pre-footer CTA band (climate.com format) ── */
 .prefooter{
   background:var(--amber);
@@ -529,6 +568,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   .gaps-grid,.faq-grid,.contact-grid{grid-template-columns:1fr;gap:44px;}
   .gaps-visual,.faq-left{position:static;}
   .impact-grid,.watch-grid{grid-template-columns:1fr;}
+  .story-card{grid-template-columns:1fr;}
+  .story-img{min-height:240px;}
   .impact::after,.contact-sec::before{display:none;}
   .foot-top{grid-template-columns:1fr 1fr;}
   nav{
@@ -556,8 +597,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
 <body>
 
 <!-- ── Cross-line bar ── -->
-<div class="xbar">Also from TechSolutions: AI agents that answer your business's phone, book jobs, and qualify leads —
-  <a href="agents.html">visit TechSolutions Agents
+<div class="xbar">Also from TechSolutions: AI agents that answer your business's phone, book jobs, and qualify leads.
+  <a href="agents.html">Visit TechSolutions Agents
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </div>
@@ -601,8 +642,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="hc-content">
       <div class="wrap">
         <div class="hc-kicker">LoRaWAN farm monitoring</div>
-        <h1>Your farm, readable from your phone — <em>no cell towers required.</em></h1>
-        <p class="sub">Battery-powered sensors in your fields, tanks, and stores send readings over kilometres to one gateway — and on to your phone as charts and SMS/WhatsApp alerts.</p>
+        <h1>Your farm, readable from your phone. <em>No cell towers required.</em></h1>
+        <p class="sub">Battery-powered sensors in your fields, tanks, and stores send readings over kilometres to one gateway, then on to your phone as charts and SMS/WhatsApp alerts.</p>
         <div class="hc-ctas">
           <a href="#contact" class="btn btn-amber">Book a free farm walkthrough</a>
           <a href="#gaps" class="btn btn-ghost">How it works</a>
@@ -615,8 +656,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="hc-content">
       <div class="wrap">
         <div class="hc-kicker">Data-driven irrigation</div>
-        <h1>Water when the soil asks for it — <em>not when the calendar says so.</em></h1>
-        <p class="sub">Published studies put the water savings at 20–35% when irrigation follows real-time soil moisture readings instead of a fixed schedule.</p>
+        <h1>Water when the soil asks for it, <em>not when the calendar says so.</em></h1>
+        <p class="sub">Published studies put the water savings at 20 to 35% when irrigation follows real-time soil moisture readings instead of a fixed schedule.</p>
         <div class="hc-ctas">
           <a href="#impact" class="btn btn-amber">See the published results</a>
         </div>
@@ -629,7 +670,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <div class="wrap">
         <div class="hc-kicker">Built for off-grid land</div>
         <h1>No SIM cards. No mains power. <em>No excuses from the terrain.</em></h1>
-        <p class="sub">Sensors run 5–10 years on a battery and reach the gateway from 10 km or more. Only the gateway needs power — and it can run on solar.</p>
+        <p class="sub">Sensors run 5 to 10 years on a battery and reach the gateway from 10 km or more. Only the gateway needs power, and it can run on solar.</p>
         <div class="hc-ctas">
           <a href="#watch" class="btn btn-amber">What we monitor</a>
         </div>
@@ -661,15 +702,15 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="claim reveal d1">
       <div class="big">10+ <em>km</em></div>
       <h2>Farm-wide from one gateway</h2>
-      <p>Open-field range from a single gateway to a sensor — hundreds of sensors, one subscription.</p>
+      <p>Open-field range from a single gateway to a sensor. Hundreds of sensors, one subscription.</p>
     </div>
     <div class="claim reveal d2">
       <div class="big">0 <em>SIMs</em></div>
       <h2>Maximum compatibility, minimum bills</h2>
-      <p>No SIM card, cellular plan, or mains power at the sensor. Built on the open LoRaWAN standard — no vendor lock-in.</p>
+      <p>No SIM card, cellular plan, or mains power at the sensor. Built on the open LoRaWAN standard, with no vendor lock-in.</p>
     </div>
     <div class="claim reveal d3">
-      <div class="big">20–35<em>%</em></div>
+      <div class="big">Up to 35<em>%</em></div>
       <h2>Less water, published results</h2>
       <p>Water savings when irrigation follows real-time soil readings, across multiple published studies.</p>
     </div>
@@ -715,7 +756,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             Stop walking fields to check what a sensor can text you
             <span class="acc-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="acc-body"><p>Probes at root depth report hourly. You irrigate when the soil actually needs it — not on a fixed schedule — and published studies put the water savings at 20–35%.</p></div>
+          <div class="acc-body"><p>Probes at root depth report hourly. You irrigate when the soil actually needs it, not on a fixed schedule. Published studies put the water savings at 20 to 35%.</p></div>
         </div>
         <div class="acc-item">
           <button class="acc-btn" aria-expanded="false">
@@ -723,7 +764,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             Never lose a harvest to a warm cold room
             <span class="acc-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="acc-body"><p>Storage temperature, tank levels, pump status, and animals leaving a boundary — the urgent things arrive as ordinary SMS or WhatsApp messages, so nobody has to open an app to act.</p></div>
+          <div class="acc-body"><p>Storage temperature, tank levels, pump status, and animals leaving a boundary. The urgent things arrive as ordinary SMS or WhatsApp messages, so nobody has to open an app to act.</p></div>
         </div>
         <div class="acc-item">
           <button class="acc-btn" aria-expanded="false">
@@ -731,7 +772,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             One gateway covers the whole farm
             <span class="acc-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="acc-body"><p>Sensors run 5–10 years on a battery and reach the gateway from 10 km or more in open terrain. Only the gateway needs power and a connection — and it can run on solar. A peer-reviewed trial in rural Mozambique ran exactly this where no telecom infrastructure existed.</p></div>
+          <div class="acc-body"><p>Sensors run 5 to 10 years on a battery and reach the gateway from 10 km or more in open terrain. Only the gateway needs power and a connection, and it can run on solar. A peer-reviewed trial in rural Mozambique ran exactly this where no telecom infrastructure existed.</p></div>
         </div>
         <div class="acc-item">
           <button class="acc-btn" aria-expanded="false">
@@ -739,7 +780,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             Installed and supported, not shipped in a box
             <span class="acc-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="acc-body"><p>We walk the land with you, propose in plain language, install and test coverage across your plots, then train your team and stay reachable. No long contracts — support is month to month, and you own the hardware and the data.</p></div>
+          <div class="acc-body"><p>We walk the land with you, propose in plain language, install and test coverage across your plots, then train your team and stay reachable. No long contracts. Support is month to month, and you own the hardware and the data.</p></div>
         </div>
       </div>
     </div>
@@ -752,11 +793,11 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="sec-head-center reveal">
       <span class="sec-kicker">real research, real results</span>
       <h2 class="sec-title">What the published results say</h2>
-      <p class="sec-sub">We'd rather show you research than promises. These numbers come from published studies and industry case studies — sources below.</p>
+      <p class="sec-sub">We'd rather show you research than promises. These numbers come from published studies and industry case studies, with sources below.</p>
     </div>
     <div class="impact-grid">
       <div class="impact-card reveal d1">
-        <div class="big">20–35%</div>
+        <div class="big">Up to 35%</div>
         <h3>Less water</h3>
         <p>When irrigation follows real-time soil moisture readings instead of a fixed schedule, across multiple published studies.</p>
       </div>
@@ -771,7 +812,26 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <p>Documented on commercial farms in LoRa Alliance / Semtech smart-agriculture case studies.</p>
       </div>
     </div>
-    <p class="impact-src reveal">Sources: <a href="https://www.semtech.com/lora/lora-applications/smart-agriculture" target="_blank" rel="noopener">Semtech LoRa smart agriculture</a> · <a href="https://www.concept13.co.uk/news/lorawan-soil-moisture-sensors/" target="_blank" rel="noopener">Concept13 on LoRaWAN soil moisture</a> · <a href="https://www.hashstudioz.com/blog/lorawan-for-iot-ecosystem/" target="_blank" rel="noopener">HashStudioz LoRaWAN in agriculture</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12526982/" target="_blank" rel="noopener">Peer-reviewed LoRaWAN field trial in rural Mozambique</a> · <a href="https://www.ibm.com/think/topics/smart-farming" target="_blank" rel="noopener">IBM — What is smart farming?</a>. Results vary by crop, soil, and season — we'll tell you what's realistic for your land.</p>
+    <p class="impact-src reveal">Sources: <a href="https://www.semtech.com/lora/lora-applications/smart-agriculture" target="_blank" rel="noopener">Semtech LoRa smart agriculture</a> · <a href="https://www.concept13.co.uk/news/lorawan-soil-moisture-sensors/" target="_blank" rel="noopener">Concept13 on LoRaWAN soil moisture</a> · <a href="https://www.hashstudioz.com/blog/lorawan-for-iot-ecosystem/" target="_blank" rel="noopener">HashStudioz LoRaWAN in agriculture</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12526982/" target="_blank" rel="noopener">Peer-reviewed LoRaWAN field trial in rural Mozambique</a> · <a href="https://www.ibm.com/think/topics/smart-farming" target="_blank" rel="noopener">IBM: What is smart farming?</a>. Results vary by crop, soil, and season. We'll tell you what's realistic for your land.</p>
+  </div>
+</section>
+
+<!-- ── Feature story ── -->
+<section class="story">
+  <div class="wrap">
+    <div class="story-card reveal">
+      <div class="story-img">
+        <img src="https://live.staticflickr.com/566/22436376226_8779dceb29_b.jpg" alt="A woman farmer standing in her maize field" loading="lazy">
+      </div>
+      <div class="story-body">
+        <div class="story-tag">Field-proven</div>
+        <h3>Proven where nothing else works.</h3>
+        <p>A peer-reviewed field trial in rural Mozambique ran LoRaWAN soil monitoring on farmland with no electricity and no telecom coverage. A solar-powered gateway and battery sensors delivered reliable readings for the full study period. That is the same architecture we install on your land.</p>
+        <a class="story-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12526982/" target="_blank" rel="noopener">Read the study
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -786,25 +846,25 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <div class="watch-card reveal d1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
         <h3>Soil moisture &amp; temperature</h3>
-        <p>Probes at root depth report hourly. You irrigate when the soil actually needs it — not on a fixed schedule.</p>
-        <div class="spec">typical probe: buried 20–60 cm · reports hourly · sealed IP67 · runs years on lithium cells</div>
+        <p>Probes at root depth report hourly. You irrigate when the soil actually needs it, not on a fixed schedule.</p>
+        <div class="spec">typical probe: buried 20 to 60 cm · reports hourly · sealed IP67 · runs years on lithium cells</div>
       </div>
       <div class="watch-card reveal d2">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
         <h3>Weather &amp; microclimate</h3>
-        <p>Rainfall, humidity, and temperature per plot — useful for spray timing, frost warnings, and disease-risk windows.</p>
+        <p>Rainfall, humidity, and temperature per plot. Useful for spray timing, frost warnings, and disease-risk windows.</p>
         <div class="spec">typical station: rain gauge + temp/RH · solar trickle · per-plot, not per-region data</div>
       </div>
       <div class="watch-card reveal d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6M12 22v-2M4.93 10.93l1.41 1.41M17.66 12.34l1.41-1.41M2 18h20M7 18a5 5 0 0 1 10 0"/></svg>
         <h3>Irrigation control</h3>
-        <p>Valves and pumps switched remotely — or automatically when moisture drops below a threshold you set.</p>
+        <p>Valves and pumps switched remotely, or automatically when moisture drops below a threshold you set.</p>
         <div class="spec">latching valve actuators · threshold or manual trigger · your rules, not ours</div>
       </div>
       <div class="watch-card reveal d1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8l4 10H4L8 2z"/><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/><path d="M12 12v8"/></svg>
         <h3>Water tanks &amp; pumps</h3>
-        <p>Tank levels, pump running status, and leak detection — know a pump failed before the crop tells you.</p>
+        <p>Tank levels, pump running status, and leak detection. Know a pump failed before the crop tells you.</p>
         <div class="spec">ultrasonic or pressure level sensing · pump current monitoring · low-level SMS alert</div>
       </div>
       <div class="watch-card reveal d2">
@@ -820,9 +880,16 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <div class="spec">temp/RH loggers · out-of-range SMS within minutes · full history kept for disputes</div>
       </div>
     </div>
-    <div class="honesty-inner reveal"><em>A note on honesty:</em> sensors aren't right for every farm. If your plot is small enough to walk in ten minutes and you know your soil by hand, a weather station and a good routine may beat a sensor network — and we'll tell you that at the walkthrough, not after the invoice.</div>
+    <div class="honesty-inner reveal"><em>A note on honesty:</em> sensors aren't right for every farm. If your plot is small enough to walk in ten minutes and you know your soil by hand, a weather station and a good routine may beat a sensor network, and we'll tell you that at the walkthrough, not after the invoice.</div>
   </div>
 </section>
+
+<!-- ── Statement band ── -->
+<div class="stateband">
+  <div class="wrap reveal">
+    <h2>Open standard. Farm-wide reach. <em>Yours to keep.</em></h2>
+  </div>
+</div>
 
 <!-- ── FAQ ── -->
 <section class="faq" id="faq">
@@ -830,7 +897,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="faq-left reveal">
       <span class="sec-kicker">questions are welcome</span>
       <h2 class="sec-title">Fair questions. <em>Plain answers.</em></h2>
-      <p>If your question isn't here, ask it at the walkthrough — clarity is part of the service.</p>
+      <p>If your question isn't here, ask it at the walkthrough. Clarity is part of the service.</p>
       <div class="faq-art">
         <div class="dlabel">How a deployment fits together</div>
         <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Field sensors sending readings to a gateway and on to a phone">
@@ -856,49 +923,49 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
           My farm has no cell signal and no power in the fields. Does this still work?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Yes — that's the situation LoRaWAN was designed for. Sensors run for years on batteries and don't need any signal except the gateway's radio, which reaches 10 km or more in open terrain. Only the gateway needs power and an internet connection, and it can run on solar with a single cellular or satellite link. A peer-reviewed trial in rural Mozambique ran exactly this setup where no telecom infrastructure existed.</p></div>
+        <div class="faq-a"><p>Yes, that's the situation LoRaWAN was designed for. Sensors run for years on batteries and don't need any signal except the gateway's radio, which reaches 10 km or more in open terrain. Only the gateway needs power and an internet connection, and it can run on solar with a single cellular or satellite link. A peer-reviewed trial in rural Mozambique ran exactly this setup where no telecom infrastructure existed.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What does a starter deployment look like?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Typically one gateway plus a handful of soil moisture probes on your most valuable or thirstiest plot, and alerts to your phone. That's enough to prove the value on your own land in one season. If the numbers work, you add sensors — the gateway you already have will handle hundreds of them.</p></div>
+        <div class="faq-a"><p>Typically one gateway plus a handful of soil moisture probes on your most valuable or thirstiest plot, and alerts to your phone. That's enough to prove the value on your own land in one season. If the numbers work, you add sensors. The gateway you already have will handle hundreds of them.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           Will I really save 35% on water?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Honestly: it depends. The 20–35% figures come from published studies, and they're real — but your savings depend on how much you currently over-water, your crop, and your soil. If you already irrigate carefully, the gain is smaller. That's why our proposals state what we'd measure, so you can judge the system on your own numbers, not someone else's.</p></div>
+        <div class="faq-a"><p>Honestly: it depends. The 20 to 35% figures come from published studies, and they're real, but your savings depend on how much you currently over-water, your crop, and your soil. If you already irrigate carefully, the gain is smaller. That's why our proposals state what we'd measure, so you can judge the system on your own numbers, not someone else's.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What does working with you look like?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Four steps, no mystery. We walk the land with you and find where water, crops, or money are being lost — free, no obligation. You get a plain-language proposal: which sensors go where, what it costs, what it should save, and what we'd measure to prove it. We install the gateway and sensors and test coverage across your land. Then we train you and your workers, hand over plain documentation, and stay reachable.</p></div>
+        <div class="faq-a"><p>Four steps, no mystery. We walk the land with you and find where water, crops, or money are being lost, free and with no obligation. You get a plain-language proposal: which sensors go where, what it costs, what it should save, and what we'd measure to prove it. We install the gateway and sensors and test coverage across your land. Then we train you and your workers, hand over plain documentation, and stay reachable.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What happens when a sensor breaks or a battery dies?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>The dashboard flags any sensor that stops reporting, and battery levels are part of every reading — so replacements are planned, not surprises. Batteries last 5–10 years depending on how often the sensor reports. Swapping a sensor is a ten-minute job we can do on a support visit, or show your team how to do themselves.</p></div>
+        <div class="faq-a"><p>The dashboard flags any sensor that stops reporting, and battery levels are part of every reading, so replacements are planned, not surprises. Batteries last 5 to 10 years depending on how often the sensor reports. Swapping a sensor is a ten-minute job we can do on a support visit, or show your team how to do themselves.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           Do my workers need to learn new software?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>The urgent things arrive as ordinary SMS or WhatsApp messages — "Plot 3 soil is dry", "Cold room above 8°C" — so nobody has to open an app to act. The dashboard with charts and history is there when you want to look deeper, and we train whoever will use it during handover.</p></div>
+        <div class="faq-a"><p>The urgent things arrive as ordinary SMS or WhatsApp messages, like "Plot 3 soil is dry" or "Cold room above 8°C", so nobody has to open an app to act. The dashboard with charts and history is there when you want to look deeper, and we train whoever will use it during handover.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What happens after you hand the system over?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>You choose: run it yourself with the documentation and training we provide, or keep us on a light support arrangement for changes, new sensors, and updates. There are no long contracts either way — support is month to month. You own the hardware and the data.</p></div>
+        <div class="faq-a"><p>You choose: run it yourself with the documentation and training we provide, or keep us on a light support arrangement for changes, new sensors, and updates. There are no long contracts either way. Support is month to month. You own the hardware and the data.</p></div>
       </div>
     </div>
   </div>
@@ -924,7 +991,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <h3>Start with a conversation, not a contract.</h3>
         <p class="contact-note">Tell us a little about your farm and what you're trying to fix. We reply within one business day, usually with a few questions and a suggested next step.</p>
         <div class="cta-badges">
-          <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>No long-term contracts — support is month to month</div>
+          <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>No long-term contracts. Support is month to month</div>
           <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>You own the hardware, the data, and the accounts</div>
           <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>A real person answers, and we visit in person</div>
         </div>
@@ -958,7 +1025,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
               <option value="livestock">Livestock or asset tracking</option>
               <option value="storage">Storage &amp; cold rooms</option>
               <option value="full">A full farm assessment</option>
-              <option value="unsure">Not sure yet — let's talk</option>
+              <option value="unsure">Not sure yet, let's talk</option>
             </select>
           </div>
           <div class="form-field">
@@ -972,7 +1039,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         </form>
         <div class="form-success" id="form-success">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Thanks — we've got it.</h3>
+          <h3>Thanks, we've got it.</h3>
           <p>We typically reply within one business day. You can also email us directly at <a href="mailto:hello@farmtechsolutions.com" style="color:var(--amber);font-weight:600;">hello@farmtechsolutions.com</a>.</p>
         </div>
       </div>
@@ -997,7 +1064,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
           </svg>
           FarmTech <em>Solutions</em>
         </div>
-        <p class="blurb">LoRaWAN sensor networks for farms — soil, water, livestock, and storage, readable from your phone. Scoped honestly, installed properly, supported by people you can reach.</p>
+        <p class="blurb">LoRaWAN sensor networks for farms: soil, water, livestock, and storage, readable from your phone. Scoped honestly, installed properly, supported by people you can reach.</p>
       </div>
       <div class="foot-col">
         <h3>Quick nav</h3>
@@ -1015,7 +1082,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       </div>
       <div class="foot-col">
         <h3>Resources</h3>
-        <a href="agents.html">TechSolutions Agents — AI for business</a>
+        <a href="agents.html">TechSolutions Agents: AI for business</a>
         <a href="https://lora-alliance.org/" target="_blank" rel="noopener">LoRa Alliance</a>
         <a href="https://www.ibm.com/think/topics/smart-farming" target="_blank" rel="noopener">What is smart farming?</a>
         <a href="#contact">Contact</a>

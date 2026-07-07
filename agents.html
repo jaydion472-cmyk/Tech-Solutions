@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechSolutions Agents — Agentic AI for Business | AI Agent Setup &amp; Integration</title>
+<title>TechSolutions Agents | Agentic AI for Business | AI Agent Setup &amp; Integration</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><g stroke='%232D3B2A' stroke-width='5' stroke-linecap='round'><line x1='40' y1='40' x2='20' y2='20'/><line x1='40' y1='40' x2='62' y2='16'/><line x1='40' y1='40' x2='64' y2='62'/><line x1='40' y1='40' x2='22' y2='60'/></g><circle cx='20' cy='20' r='8' fill='%232D3B2A'/><circle cx='62' cy='16' r='8' fill='%232D3B2A'/><circle cx='64' cy='62' r='8' fill='%232D3B2A'/><circle cx='22' cy='60' r='8' fill='%23D9A441'/><circle cx='40' cy='40' r='9' fill='%23D9A441'/></svg>">
-<meta name="description" content="TechSolutions Agents sets up agentic AI for businesses — phone agents that answer every call, book appointments, qualify leads, and hand off to a human when unsure. Set up in your accounts, on your tools. You own the setup.">
-<meta property="og:title" content="TechSolutions Agents — Agentic AI for Business">
+<meta name="description" content="TechSolutions Agents sets up agentic AI for businesses: phone agents that answer every call, book appointments, qualify leads, and hand off to a human when unsure. Set up in your accounts, on your tools. You own the setup.">
+<meta property="og:title" content="TechSolutions Agents | Agentic AI for Business">
 <meta property="og:description" content="We set up your agent. We don't rent you ours.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -388,6 +388,45 @@ h2.sec-title em{font-style:normal;color:var(--soil);}
 .faq-item.open .faq-a{max-height:420px;}
 .faq-a p{padding-bottom:24px;font-size:14.5px;color:var(--text);line-height:1.8;max-width:640px;}
 
+/* ── Feature story band (photo + headline result) ── */
+.story-card{
+  display:grid;grid-template-columns:5fr 6fr;
+  border:1.5px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;background:#FDFBF6;
+}
+.story-img{position:relative;min-height:320px;}
+.story-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.story-body{padding:46px 44px;display:flex;flex-direction:column;align-items:flex-start;}
+.story-tag{
+  font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--soil);margin-bottom:14px;font-weight:600;
+}
+.story-body h3{
+  font-family:'Funnel Display',sans-serif;
+  font-size:clamp(22px,2.6vw,32px);
+  font-weight:600;letter-spacing:-0.01em;line-height:1.15;
+  color:var(--leaf);margin-bottom:14px;
+}
+.story-body p{font-size:15px;color:var(--text);line-height:1.78;margin-bottom:26px;}
+.story-link{
+  margin-top:auto;
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:14.5px;font-weight:600;color:var(--amber-dark);
+  transition:gap .18s,color .18s;
+}
+.story-link:hover{gap:12px;color:var(--leaf);}
+.story-link svg{width:15px;height:15px;flex:none;}
+
+/* ── Statement band ── */
+.stateband{background:var(--leaf);color:var(--bg);padding:80px 0;text-align:center;}
+.stateband h2{
+  font-family:'Funnel Display',sans-serif;
+  font-size:clamp(26px,3.8vw,46px);
+  font-weight:600;letter-spacing:-0.015em;
+  line-height:1.15;max-width:900px;margin:0 auto;
+}
+.stateband h2 em{font-style:normal;color:var(--amber);}
+
 /* ── Pre-footer CTA band (climate.com format) ── */
 .prefooter{
   background:var(--amber);
@@ -529,6 +568,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   .gaps-grid,.faq-grid,.contact-grid{grid-template-columns:1fr;gap:44px;}
   .gaps-visual,.faq-left{position:static;}
   .impact-grid,.watch-grid{grid-template-columns:1fr;}
+  .story-card{grid-template-columns:1fr;}
+  .story-img{min-height:240px;}
   .impact::after,.contact-sec::before{display:none;}
   .foot-top{grid-template-columns:1fr 1fr;}
   nav{
@@ -556,8 +597,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
 <body>
 
 <!-- ── Cross-line bar ── -->
-<div class="xbar">Also from TechSolutions: LoRaWAN sensor networks that make farms readable from a phone —
-  <a href="./">visit FarmTech Solutions
+<div class="xbar">Also from TechSolutions: LoRaWAN sensor networks that make farms readable from a phone.
+  <a href="./">Visit FarmTech Solutions
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </div>
@@ -615,8 +656,8 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="hc-content">
       <div class="wrap">
         <div class="hc-kicker">Every call answered</div>
-        <h1>Your phone answered at 9 PM on a Sunday — <em>by an agent that knows your business.</em></h1>
-        <p class="sub">A 2024 study found 62% of calls to small businesses go unanswered — and most of those callers never call back. An agent picks up every one, books the job, and texts you the details.</p>
+        <h1>Your phone answered at 9 PM on a Sunday, <em>by an agent that knows your business.</em></h1>
+        <p class="sub">A 2024 study found 62% of calls to small businesses go unanswered, and most of those callers never call back. An agent picks up every one, books the job, and texts you the details.</p>
         <div class="hc-ctas">
           <a href="#impact" class="btn btn-amber">See the numbers</a>
         </div>
@@ -661,7 +702,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="claim reveal d1">
       <div class="big">24<em>/7</em></div>
       <h2>Always answering</h2>
-      <p>Nights, weekends, holidays. Your agent picks up every call and every message — no hold music, no busy signal.</p>
+      <p>Nights, weekends, holidays. Your agent picks up every call and every message. No hold music, no busy signal.</p>
     </div>
     <div class="claim reveal d2">
       <div class="big">0 <em>lock-in</em></div>
@@ -671,7 +712,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="claim reveal d3">
       <div class="big">62<em>%</em></div>
       <h2>Of business calls go unanswered</h2>
-      <p>Across 85 businesses in a 2024 study — and most callers who hit voicemail never call back. That's the leak we plug.</p>
+      <p>Across 85 businesses in a 2024 study. Most callers who hit voicemail never call back. That's the leak we plug.</p>
     </div>
   </div>
 </div>
@@ -682,7 +723,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="sec-head-center reveal">
       <span class="sec-kicker">fewer missed calls, more booked jobs</span>
       <h2 class="sec-title">The gaps we close</h2>
-      <p class="sec-sub">Missed calls, slow follow-ups, evenings lost to admin. Agentic AI can already do this work — the hard part is setting it up so it knows your business and fails safely. That's the part we do.</p>
+      <p class="sec-sub">Missed calls, slow follow-ups, evenings lost to admin. Agentic AI can already do this work. The hard part is setting it up so it knows your business and fails safely. That's the part we do.</p>
     </div>
     <div class="gaps-grid">
       <div class="gaps-visual reveal">
@@ -722,7 +763,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             Leads qualified before they reach you
             <span class="acc-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="acc-body"><p>Before a lead reaches you, the agent has already collected the job type, location, and rough budget — so the first call you make is to someone worth calling.</p></div>
+          <div class="acc-body"><p>Before a lead reaches you, the agent has already collected the job type, location, and rough budget, so the first call you make is to someone worth calling.</p></div>
         </div>
         <div class="acc-item">
           <button class="acc-btn" aria-expanded="false">
@@ -738,7 +779,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
             Set up in your accounts, not rented from ours
             <span class="acc-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="acc-body"><p>We pick the platform that fits your budget, configure it in accounts you own, test it against awkward questions before launch, then train your team and stay reachable. No long contracts — support is month to month.</p></div>
+          <div class="acc-body"><p>We pick the platform that fits your budget, configure it in accounts you own, test it against awkward questions before launch, then train your team and stay reachable. No long contracts. Support is month to month.</p></div>
         </div>
       </div>
     </div>
@@ -751,7 +792,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="sec-head-center reveal">
       <span class="sec-kicker">real research, real numbers</span>
       <h2 class="sec-title">What missed calls actually cost</h2>
-      <p class="sec-sub">We'd rather show you research than promises. These numbers come from published industry studies — sources below.</p>
+      <p class="sec-sub">We'd rather show you research than promises. These numbers come from published industry studies, with sources below.</p>
     </div>
     <div class="impact-grid">
       <div class="impact-card reveal d1">
@@ -762,7 +803,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <div class="impact-card reveal d2">
         <div class="big">85%</div>
         <h3>Never call back</h3>
-        <p>Most callers who reach voicemail don't try again — the enquiry simply disappears, and you never know it happened.</p>
+        <p>Most callers who reach voicemail don't try again. The enquiry simply disappears, and you never know it happened.</p>
       </div>
       <div class="impact-card reveal d3">
         <div class="big">62%</div>
@@ -770,7 +811,26 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <p>A majority of callers who can't reach a business take their job to the next name on the list.</p>
       </div>
     </div>
-    <p class="impact-src reveal">Sources: <a href="https://www.getaira.io/blog/missed-business-calls-statistics" target="_blank" rel="noopener">411 Locals 2024 missed-call study (summary)</a> · <a href="https://callforce.global/blog/cost-of-missed-calls-and-slow-lead-response-2026/" target="_blank" rel="noopener">CallForce on missed calls and slow lead response</a> · <a href="https://pcnanswers.com/missed-call-revenue-study/" target="_blank" rel="noopener">PCN missed-call revenue study</a>. Your numbers depend on your call volume and industry — at the walkthrough we'll estimate what missed calls cost your business specifically.</p>
+    <p class="impact-src reveal">Sources: <a href="https://www.getaira.io/blog/missed-business-calls-statistics" target="_blank" rel="noopener">411 Locals 2024 missed-call study (summary)</a> · <a href="https://callforce.global/blog/cost-of-missed-calls-and-slow-lead-response-2026/" target="_blank" rel="noopener">CallForce on missed calls and slow lead response</a> · <a href="https://pcnanswers.com/missed-call-revenue-study/" target="_blank" rel="noopener">PCN missed-call revenue study</a>. Your numbers depend on your call volume and industry. At the walkthrough we'll estimate what missed calls cost your business specifically.</p>
+  </div>
+</section>
+
+<!-- ── Feature story ── -->
+<section class="story">
+  <div class="wrap">
+    <div class="story-card reveal">
+      <div class="story-img">
+        <img src="https://live.staticflickr.com/7090/7269959082_54a81cfeb2_b.jpg" alt="A receptionist answering the phone at a front desk" loading="lazy">
+      </div>
+      <div class="story-body">
+        <div class="story-tag">The 62% problem</div>
+        <h3>Most missed calls never come back. An agent makes missing them impossible.</h3>
+        <p>In a 2024 study across 85 businesses, only about 38% of incoming calls were answered by a live person. Most callers who reached voicemail never tried again. Every one of those rings was a customer you had already paid to attract. An agent answers all of them, at once if it has to.</p>
+        <a class="story-link" href="https://www.getaira.io/blog/missed-business-calls-statistics" target="_blank" rel="noopener">Read the study summary
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -785,7 +845,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <div class="watch-card reveal d1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <h3>After-hours phone agent</h3>
-        <p>Answers every call the moment it rings — 9 PM or Sunday afternoon — answers common questions, and captures the lead.</p>
+        <p>Answers every call the moment it rings, at 9 PM or on a Sunday afternoon, answers common questions, and captures the lead.</p>
         <div class="spec">trained on your services &amp; prices · fallback to human · call summary texted to you</div>
       </div>
       <div class="watch-card reveal d2">
@@ -797,19 +857,19 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <div class="watch-card reveal d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         <h3>Lead qualification</h3>
-        <p>Collects the job type, location, and rough budget before a lead reaches you — so you only spend time on real prospects.</p>
+        <p>Collects the job type, location, and rough budget before a lead reaches you, so you only spend time on real prospects.</p>
         <div class="spec">your qualifying questions · summary per lead · pushed to your CRM or inbox</div>
       </div>
       <div class="watch-card reveal d1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
         <h3>Inbox &amp; follow-up automation</h3>
-        <p>Quote follow-ups drafted, email triaged, and the CRM kept current after every call — the admin that eats evenings.</p>
+        <p>Quote follow-ups drafted, email triaged, and the CRM kept current after every call. This is the admin that eats evenings.</p>
         <div class="spec">drafts for your approval · follow-up sequences · CRM notes logged automatically</div>
       </div>
       <div class="watch-card reveal d2">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <h3>WhatsApp &amp; web chat</h3>
-        <p>The same agent answers on your website and WhatsApp — one brain across every channel your customers already use.</p>
+        <p>The same agent answers on your website and WhatsApp. One brain across every channel your customers already use.</p>
         <div class="spec">one knowledge base · consistent answers everywhere · full conversation history</div>
       </div>
       <div class="watch-card reveal d3">
@@ -819,9 +879,16 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <div class="spec">your escalation rules · instant notification · no lead lost to a confused bot</div>
       </div>
     </div>
-    <div class="honesty-inner reveal"><em>A note on honesty:</em> an agent isn't right for every job. If a simple form, a booking page, or a better phone menu solves your problem, we'll tell you that at the walkthrough — it's cheaper for you and less to maintain.</div>
+    <div class="honesty-inner reveal"><em>A note on honesty:</em> an agent isn't right for every job. If a simple form, a booking page, or a better phone menu solves your problem, we'll tell you that at the walkthrough. It's cheaper for you and less to maintain.</div>
   </div>
 </section>
+
+<!-- ── Statement band ── -->
+<div class="stateband">
+  <div class="wrap reveal">
+    <h2>Set up once. Answering always. <em>Yours to keep.</em></h2>
+  </div>
+</div>
 
 <!-- ── FAQ ── -->
 <section class="faq" id="faq">
@@ -829,7 +896,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     <div class="faq-left reveal">
       <span class="sec-kicker">questions are welcome</span>
       <h2 class="sec-title">Fair questions. <em>Plain answers.</em></h2>
-      <p>If your question isn't here, ask it at the walkthrough — clarity is part of the service.</p>
+      <p>If your question isn't here, ask it at the walkthrough. Clarity is part of the service.</p>
       <div class="faq-art">
         <div class="dlabel">Where your agent fits</div>
         <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calls, chat, and email flow into the agent, which books jobs and notifies you">
@@ -861,7 +928,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
           Do I have to buy your AI agent subscription?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>No — we don't have one. We set up an agent on the platform that fits your budget and needs, in your own accounts. You pay the platform directly and you pay us for the setup, integration, and support. If we part ways, your agent keeps working.</p></div>
+        <div class="faq-a"><p>No, we don't have one. We set up an agent on the platform that fits your budget and needs, in your own accounts. You pay the platform directly and you pay us for the setup, integration, and support. If we part ways, your agent keeps working.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
@@ -875,35 +942,35 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
           How long does setup take?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Most businesses are live within one to two weeks. The first days go on understanding your services, prices, and tone; then we configure and connect the agent, test it hard against real scenarios, and let you review every answer before it talks to a customer. Rushing this stage is how agents end up embarrassing their owners — we don't rush it.</p></div>
+        <div class="faq-a"><p>Most businesses are live within one to two weeks. The first days go on understanding your services, prices, and tone; then we configure and connect the agent, test it hard against real scenarios, and let you review every answer before it talks to a customer. Rushing this stage is how agents end up embarrassing their owners, so we don't rush it.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What happens when the agent can't answer a question?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>It follows its fallback rule: collect the caller's name and number, say a person will follow up, and send you a summary immediately. It never invents an answer to fill the silence — an honest "let me have someone call you back" keeps the lead; a made-up price loses the customer.</p></div>
+        <div class="faq-a"><p>It follows its fallback rule: collect the caller's name and number, say a person will follow up, and send you a summary immediately. It never invents an answer to fill the silence. An honest "let me have someone call you back" keeps the lead; a made-up price loses the customer.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What does it cost?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Two parts: a one-time setup fee from us, and the platform's own subscription which you pay directly — typically a fraction of one part-time employee's wages. The exact numbers depend on call volume and how many tools we connect, so the proposal you get after the walkthrough states both figures plainly before you commit to anything.</p></div>
+        <div class="faq-a"><p>Two parts: a one-time setup fee from us, and the platform's own subscription which you pay directly, typically a fraction of one part-time employee's wages. The exact numbers depend on call volume and how many tools we connect, so the proposal you get after the walkthrough states both figures plainly before you commit to anything.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           Does my team need to learn new software?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Barely. Bookings land in the calendar you already use, lead summaries arrive as ordinary texts or emails, and the agent's dashboard is only there when you want to review conversations. We train whoever will manage it during handover — usually under an hour.</p></div>
+        <div class="faq-a"><p>Barely. Bookings land in the calendar you already use, lead summaries arrive as ordinary texts or emails, and the agent's dashboard is only there when you want to review conversations. We train whoever will manage it during handover, usually under an hour.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           What happens after you hand the system over?
           <span class="faq-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>You choose: run it yourself with the documentation and training we provide, or keep us on a light support arrangement for changes, new channels, and updates. There are no long contracts either way — support is month to month. You own the accounts, the setup, and the data.</p></div>
+        <div class="faq-a"><p>You choose: run it yourself with the documentation and training we provide, or keep us on a light support arrangement for changes, new channels, and updates. There are no long contracts either way. Support is month to month. You own the accounts, the setup, and the data.</p></div>
       </div>
     </div>
   </div>
@@ -929,9 +996,9 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         <h3>Start with a conversation, not a contract.</h3>
         <p class="contact-note">Tell us a little about your business and what's eating your time. We reply within one business day, usually with a few questions and a suggested next step.</p>
         <div class="cta-badges">
-          <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>No long-term contracts — support is month to month</div>
+          <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>No long-term contracts. Support is month to month</div>
           <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>You own the accounts, the setup, and the data</div>
-          <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>A real person answers — the irony isn't lost on us</div>
+          <div class="cta-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>A real person answers. The irony isn't lost on us</div>
         </div>
       </div>
       <div class="reveal d2">
@@ -963,7 +1030,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
               <option value="leads">Lead qualification &amp; follow-ups</option>
               <option value="inbox">Inbox &amp; CRM automation</option>
               <option value="chat">WhatsApp &amp; web chat</option>
-              <option value="unsure">Not sure yet — let's talk</option>
+              <option value="unsure">Not sure yet, let's talk</option>
             </select>
           </div>
           <div class="form-field">
@@ -977,7 +1044,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
         </form>
         <div class="form-success" id="form-success">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Thanks — we've got it.</h3>
+          <h3>Thanks, we've got it.</h3>
           <p>We typically reply within one business day. You can also email us directly at <a href="mailto:hello@farmtechsolutions.com" style="color:var(--amber);font-weight:600;">hello@farmtechsolutions.com</a>.</p>
         </div>
       </div>
@@ -1002,7 +1069,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
           </svg>
           TechSolutions <em>Agents</em>
         </div>
-        <p class="blurb">Agentic AI for businesses — phones answered, bookings made, leads qualified, admin automated. Scoped honestly, set up properly, supported by people you can reach.</p>
+        <p class="blurb">Agentic AI for businesses: phones answered, bookings made, leads qualified, admin automated. Scoped honestly, set up properly, supported by people you can reach.</p>
       </div>
       <div class="foot-col">
         <h3>Quick nav</h3>
@@ -1020,7 +1087,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       </div>
       <div class="foot-col">
         <h3>Resources</h3>
-        <a href="./">FarmTech Solutions — our smart farming line</a>
+        <a href="./">FarmTech Solutions: our smart farming line</a>
         <a href="#contact">Contact</a>
         <a href="mailto:hello@farmtechsolutions.com">hello@farmtechsolutions.com</a>
       </div>
