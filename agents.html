@@ -105,14 +105,30 @@ nav a{
 }
 nav a:hover,nav a.active{color:var(--leaf);}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--leaf);}
-.head-lines{
-  display:flex;flex-direction:column;text-align:right;line-height:1.5;
+.contact-menu{position:relative;}
+.contact-trigger{display:inline-flex;align-items:center;gap:7px;cursor:pointer;}
+.contact-trigger svg{transition:transform .2s;}
+.contact-menu.open .contact-trigger svg{transform:rotate(180deg);}
+.contact-dropdown{
+  position:absolute;top:calc(100% + 10px);right:0;
+  min-width:262px;
+  background:#FDFBF6;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  box-shadow:0 18px 44px -14px rgba(38,34,27,0.30);
+  padding:8px;
+  display:none;flex-direction:column;gap:2px;
+  z-index:70;
 }
-.head-lines a{
-  font-size:12.5px;color:var(--text);font-weight:600;
-  transition:color .15s;
+.contact-menu.open .contact-dropdown{display:flex;}
+.contact-dropdown a{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 13px;border-radius:8px;
+  font-size:14px;font-weight:600;color:var(--ink);
+  transition:background .15s,color .15s;
 }
-.head-lines a:hover{color:var(--leaf);}
+.contact-dropdown a:hover{background:var(--bg-2);color:var(--leaf);}
+.contact-dropdown a svg{width:18px;height:18px;color:var(--soil);flex:none;}
 
 /* ── Hero carousel (full-bleed, climate.com format) ── */
 .hero-carousel{
@@ -588,8 +604,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   nav.open{display:flex;}
   nav a{padding:13px 32px;}
   .nav-toggle{display:block;}
-  header .btn{display:none;}
-  .head-lines{display:none;}
+  .contact-dropdown{min-width:230px;}
   .form-row{grid-template-columns:1fr;}
 }
 @media(max-width:560px){
@@ -633,13 +648,19 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       <a href="#watch">What we set up</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div style="display:flex;align-items:center;gap:14px;">
-      <div class="head-lines">
-        <a href="tel:+12524203078">Call +1 252 420 3078</a>
-        <a href="https://wa.me/12524203078" target="_blank" rel="noopener">WhatsApp +1 252 420 3078</a>
-        <a href="mailto:hello@techsolutionsagents.com">hello@techsolutionsagents.com</a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="contact-menu" id="contact-menu">
+        <button type="button" class="btn btn-leaf contact-trigger" id="contact-btn" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" style="font-size:14px;padding:11px 20px;">
+          Contact us
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="contact-dropdown" id="contact-dropdown" role="menu" aria-label="Contact options">
+          <a role="menuitem" href="tel:+12524203078"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call +1 252 420 3078</a>
+          <a role="menuitem" href="https://wa.me/12524203078" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.26-.1-.45-.15-.65.15-.19.29-.74.94-.9 1.13-.17.19-.34.21-.63.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5h-.56c-.19 0-.5.07-.77.36-.26.29-1 .98-1 2.4 0 1.41 1.03 2.78 1.17 2.97.15.19 2.03 3.09 4.91 4.33.69.3 1.22.47 1.64.61.69.22 1.31.19 1.81.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.56-.34zM12.05 21.5h-.01a9.5 9.5 0 0 1-4.83-1.32l-.35-.21-3.59.94.96-3.5-.23-.36a9.46 9.46 0 0 1-1.45-5.05c0-5.24 4.27-9.5 9.51-9.5 2.54 0 4.92.99 6.72 2.78a9.44 9.44 0 0 1 2.78 6.72c0 5.24-4.27 9.5-9.5 9.5zm5.54-15.04A11.36 11.36 0 0 0 12.05 3C5.76 3 .64 8.12.64 14.41c0 2.02.53 3.99 1.53 5.73L.5 26l5.99-1.57a11.4 11.4 0 0 0 5.55 1.42h.01c6.29 0 11.41-5.12 11.41-11.41 0-3.05-1.19-5.91-3.35-8.06z"/></svg>WhatsApp +1 252 420 3078</a>
+          <a role="menuitem" href="mailto:hello@techsolutionsagents.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>Email hello@techsolutionsagents.com</a>
+          <a role="menuitem" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Send a message</a>
+        </div>
       </div>
-      <a href="#contact" class="btn btn-leaf" style="font-size:14px;padding:11px 20px;">Contact us</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
@@ -1152,6 +1173,15 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     });
     mainNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mainNav.classList.remove('open');navToggle.setAttribute('aria-expanded','false');});});
     document.addEventListener('click',function(e){if(!mainNav.contains(e.target)&&!navToggle.contains(e.target)){mainNav.classList.remove('open');navToggle.setAttribute('aria-expanded','false');}});
+  }
+
+  // ── Contact dropdown ──
+  var cMenu=document.getElementById('contact-menu'),cBtn=document.getElementById('contact-btn');
+  if(cMenu&&cBtn){
+    cBtn.addEventListener('click',function(e){e.stopPropagation();var open=cMenu.classList.toggle('open');cBtn.setAttribute('aria-expanded',open);});
+    cMenu.querySelectorAll('.contact-dropdown a').forEach(function(a){a.addEventListener('click',function(){cMenu.classList.remove('open');cBtn.setAttribute('aria-expanded','false');});});
+    document.addEventListener('click',function(e){if(!cMenu.contains(e.target)){cMenu.classList.remove('open');cBtn.setAttribute('aria-expanded','false');}});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){cMenu.classList.remove('open');cBtn.setAttribute('aria-expanded','false');}});
   }
 
   // ── Nav active on scroll ──
