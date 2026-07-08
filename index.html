@@ -47,6 +47,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 a{color:inherit;text-decoration:none;}
+html,body{overflow-x:clip;}
 img{display:block;max-width:100%;}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
 
@@ -141,7 +142,7 @@ nav a:hover,nav a.active{color:var(--leaf);}
 }
 .hc-slide{
   position:absolute;inset:0;
-  opacity:0;transition:opacity .9s ease;
+  opacity:0;transition:opacity .7s ease;
   pointer-events:none;
 }
 .hc-slide.active{opacity:1;pointer-events:auto;}
@@ -255,6 +256,14 @@ h2.sec-title em{font-style:normal;color:var(--soil);}
   border:1.5px solid var(--border);background:var(--bg);
 }
 .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+/* ── Vertical image slider (mid-page photos cycle upward, like the hero cycles across) ── */
+.vslide{position:relative;overflow:hidden;}
+.vslide img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transform:translateY(100%);
+  transition:transform .85s cubic-bezier(.22,.61,.36,1);
+}
+.vslide img:first-child{transform:none;}
 .gaps-visual .dcard{
   margin-top:-44px;margin-left:28px;position:relative;z-index:2;
   background:var(--bg);
@@ -561,6 +570,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   display:block;color:rgba(245,241,232,0.6);
   font-size:14.5px;margin-bottom:11px;
   transition:color .15s;
+  overflow-wrap:anywhere;
 }
 .foot-col a:hover{color:var(--amber);}
 .foot-bottom{
@@ -619,6 +629,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   .hc-slide.active{display:block;}
   .hc-content{position:relative;padding:90px 0 110px;}
   .acc-body p{padding-left:0;}
+  .foot-top{grid-template-columns:1fr;gap:32px;}
 }
 </style>
 </head>
@@ -717,12 +728,54 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
       </div>
     </div>
   </div>
+  <div class="hc-slide">
+    <img src="https://pd.w.org/2025/01/9696779fa37d35c45.88677628-2048x1536.jpeg" alt="Rows of hydroponic crops growing inside a large commercial greenhouse" loading="lazy">
+    <div class="hc-content">
+      <div class="wrap">
+        <div class="hc-kicker">Controlled growing</div>
+        <h1>Greenhouses that hold their climate <em>on their own.</em></h1>
+        <p class="sub">Temperature and humidity sensors in every row, with an SMS the moment conditions drift out of the range you set. History kept for every growing cycle.</p>
+        <div class="hc-ctas">
+          <a href="#watch" class="btn btn-amber">What we monitor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hc-slide">
+    <img src="https://pd.w.org/2026/04/1969e3e3d6c7e098.51497770-2048x1536.jpg" alt="Pepper plants growing in rows fed by drip irrigation lines" loading="lazy">
+    <div class="hc-content">
+      <div class="wrap">
+        <div class="hc-kicker">Precision drip irrigation</div>
+        <h1>Every row fed exactly <em>what the soil asks for.</em></h1>
+        <p class="sub">Probes at root depth drive your drip lines: valves open when moisture drops below the threshold you set, and close when the root zone is satisfied.</p>
+        <div class="hc-ctas">
+          <a href="#gaps" class="btn btn-amber">How it works</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hc-slide">
+    <img src="https://pd.w.org/2025/08/74068b18ec7868ac1.86216971-2048x1365.jpg" alt="A cattle herd grazing on open pasture" loading="lazy">
+    <div class="hc-content">
+      <div class="wrap">
+        <div class="hc-kicker">Livestock &amp; asset tracking</div>
+        <h1>Know where the herd is <em>without leaving the house.</em></h1>
+        <p class="sub">Battery-powered GPS tags on animals and equipment, with an alert the moment something leaves a boundary you draw. No SIM card per animal.</p>
+        <div class="hc-ctas">
+          <a href="#watch" class="btn btn-amber">What we monitor</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="hc-controls">
     <div class="wrap">
       <div class="hc-dots" id="hc-dots" role="tablist" aria-label="Hero slides">
         <button class="hc-dot active" data-slide="0" aria-label="Slide 1"></button>
         <button class="hc-dot" data-slide="1" aria-label="Slide 2"></button>
         <button class="hc-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hc-dot" data-slide="3" aria-label="Slide 4"></button>
+        <button class="hc-dot" data-slide="4" aria-label="Slide 5"></button>
+        <button class="hc-dot" data-slide="5" aria-label="Slide 6"></button>
       </div>
       <div class="hc-arrows">
         <button class="hc-arrow" id="hc-prev" aria-label="Previous slide">
@@ -741,17 +794,17 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   <div class="wrap claims-grid">
     <div class="claim reveal d1">
       <div class="big">10+ <em>km</em></div>
-      <h2>Farm-wide from one gateway</h2>
+      <h2>Farm-Wide From One Gateway</h2>
       <p>Open-field range from a single gateway to a sensor. Hundreds of sensors, one subscription.</p>
     </div>
     <div class="claim reveal d2">
       <div class="big">0 <em>SIMs</em></div>
-      <h2>Maximum compatibility, minimum bills</h2>
+      <h2>Maximum Compatibility, Minimum Bills</h2>
       <p>No SIM card, cellular plan, or mains power at the sensor. Built on the open LoRaWAN standard, with no vendor lock-in.</p>
     </div>
     <div class="claim reveal d3">
       <div class="big">Up to 35<em>%</em></div>
-      <h2>Less water, published results</h2>
+      <h2>Less Water, Published Results</h2>
       <p>Water savings when irrigation follows real-time soil readings, across multiple published studies.</p>
     </div>
   </div>
@@ -762,13 +815,15 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   <div class="wrap">
     <div class="sec-head-center reveal">
       <span class="sec-kicker">better informed, better harvests</span>
-      <h2 class="sec-title">The gaps we close</h2>
+      <h2 class="sec-title">The Gaps We Close</h2>
       <p class="sec-sub">Poor cell coverage, no power in the fields, decisions made on habit and hope. LoRaWAN was built for exactly this terrain.</p>
     </div>
     <div class="gaps-grid">
       <div class="gaps-visual reveal">
-        <div class="photo">
+        <div class="photo vslide">
           <img src="https://pd.w.org/2026/01/841695a265d133373.34113895-2048x1536.jpg" alt="Young maize plants growing in a healthy green field in rural Kenya" loading="lazy">
+          <img src="https://pd.w.org/2026/04/1969e3e3d6c7e098.51497770-2048x1536.jpg" alt="Pepper plants growing in rows fed by drip irrigation lines" loading="lazy">
+          <img src="https://pd.w.org/2025/01/9696779fa37d35c45.88677628-2048x1536.jpeg" alt="Rows of hydroponic crops inside a commercial greenhouse" loading="lazy">
         </div>
         <div class="dcard">
           <div class="dlabel">Field → Gateway → Phone</div>
@@ -832,7 +887,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   <div class="wrap">
     <div class="sec-head-center reveal">
       <span class="sec-kicker">real research, real results</span>
-      <h2 class="sec-title">What the published results say</h2>
+      <h2 class="sec-title">What the Published Results Say</h2>
       <p class="sec-sub">We'd rather show you research than promises. These numbers come from published studies and industry case studies, with sources below.</p>
     </div>
     <div class="impact-grid">
@@ -860,8 +915,10 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
 <section class="story">
   <div class="wrap">
     <div class="story-card reveal">
-      <div class="story-img">
+      <div class="story-img vslide">
         <img src="https://live.staticflickr.com/566/22436376226_8779dceb29_b.jpg" alt="A woman farmer standing in her maize field" loading="lazy">
+        <img src="https://pd.w.org/2025/03/42767d11318e99172.98233816-2048x1535.jpg" alt="An agricultural drone spraying a field" loading="lazy">
+        <img src="https://pd.w.org/2025/08/74068b18ec7868ac1.86216971-2048x1365.jpg" alt="A cattle herd grazing on open pasture" loading="lazy">
       </div>
       <div class="story-body">
         <div class="story-tag">Field-proven</div>
@@ -880,7 +937,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   <div class="wrap">
     <div class="sec-head-center reveal">
       <span class="sec-kicker">the things that decide your season</span>
-      <h2 class="sec-title">What we monitor</h2>
+      <h2 class="sec-title">What We Monitor</h2>
     </div>
     <div class="watch-grid">
       <div class="watch-card reveal d1">
@@ -927,7 +984,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
 <!-- ── Statement band ── -->
 <div class="stateband">
   <div class="wrap reveal">
-    <h2>Open standard. Farm-wide reach. <em>Yours to keep.</em></h2>
+    <h2>Open Standard. Farm-Wide Reach. <em>Yours to Keep.</em></h2>
   </div>
 </div>
 
@@ -936,7 +993,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   <div class="wrap faq-grid">
     <div class="faq-left reveal">
       <span class="sec-kicker">questions are welcome</span>
-      <h2 class="sec-title">Fair questions. <em>Plain answers.</em></h2>
+      <h2 class="sec-title">Fair Questions. <em>Plain Answers.</em></h2>
       <p>If your question isn't here, ask it at the walkthrough. Clarity is part of the service.</p>
       <div class="faq-art">
         <div class="dlabel">How a deployment fits together</div>
@@ -1015,7 +1072,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
 <div class="prefooter">
   <div class="wrap reveal">
     <h6>Grow your farm's visibility today</h6>
-    <h2>Stop guessing when to irrigate. <em>Begin with a free walkthrough.</em></h2>
+    <h2>Stop Guessing When to Irrigate. <em>Begin With a Free Walkthrough.</em></h2>
     <a href="#contact" class="btn btn-leaf" style="font-size:16px;padding:16px 34px;">Book a free farm walkthrough</a>
   </div>
 </div>
@@ -1025,8 +1082,10 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
-        <div class="cta-photo">
+        <div class="cta-photo vslide">
           <img src="https://live.staticflickr.com/598/21841285003_4c034a577e_b.jpg" alt="A farmer inspecting maize plants in his field" loading="lazy">
+          <img src="https://live.staticflickr.com/5449/17858228815_8edcfa0c98_b.jpg" alt="A center-pivot irrigation system watering a crop field" loading="lazy">
+          <img src="https://pd.w.org/2025/08/94868902cd42b5356.76260588-2048x1152.jpg" alt="A golden wheat field ready for harvest" loading="lazy">
         </div>
         <h3>Start with a conversation, not a contract.</h3>
         <p class="contact-note">Tell us a little about your farm and what you're trying to fix. We reply within one business day, usually with a few questions and a suggested next step.</p>
@@ -1155,7 +1214,7 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   }
   function resetTimer(){
     if(timer)clearInterval(timer);
-    timer=setInterval(function(){goTo(cur+1);},6500);
+    timer=setInterval(function(){goTo(cur+1);},4800);
   }
   if(slides.length){
     dots.forEach(function(d){d.addEventListener('click',function(){goTo(parseInt(d.dataset.slide,10));resetTimer();});});
@@ -1164,6 +1223,30 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     if(nextB)nextB.addEventListener('click',function(){goTo(cur+1);resetTimer();});
     var reduceMotionC=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     if(!reduceMotionC)resetTimer();
+  }
+
+  // ── Vertical photo sliders ──
+  var reduceMotionV=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(!reduceMotionV){
+    document.querySelectorAll('.vslide').forEach(function(sl,si){
+      var imgs=sl.querySelectorAll('img');
+      if(imgs.length<2)return;
+      var cur=0;
+      setInterval(function(){
+        var next=(cur+1)%imgs.length;
+        var out=imgs[cur],inn=imgs[next];
+        inn.style.transition='none';inn.style.transform='translateY(100%)';
+        void inn.offsetHeight;
+        inn.style.transition='';
+        out.style.transform='translateY(-100%)';
+        inn.style.transform='translateY(0)';
+        setTimeout(function(){
+          out.style.transition='none';out.style.transform='translateY(100%)';
+          void out.offsetHeight;out.style.transition='';
+        },900);
+        cur=next;
+      },4200+si*700);
+    });
   }
 
   // ── Mobile nav ──
