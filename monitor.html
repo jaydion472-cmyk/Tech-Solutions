@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What We Monitor | FarmTech Solutions</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><g stroke='%232D3B2A' stroke-width='5' stroke-linecap='round'><line x1='40' y1='40' x2='20' y2='20'/><line x1='40' y1='40' x2='62' y2='16'/><line x1='40' y1='40' x2='64' y2='62'/><line x1='40' y1='40' x2='22' y2='60'/></g><circle cx='20' cy='20' r='8' fill='%232D3B2A'/><circle cx='62' cy='16' r='8' fill='%232D3B2A'/><circle cx='64' cy='62' r='8' fill='%232D3B2A'/><circle cx='22' cy='60' r='8' fill='%23D9A441'/><circle cx='40' cy='40' r='9' fill='%23D9A441'/></svg>">
+<meta name="description" content="Soil moisture, weather, irrigation, tanks and pumps, livestock, and cold rooms, monitored by LoRaWAN sensors and readable from your phone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<!-- ── Cross-line bar ── -->
+<div class="xbar">Also from TechSolutions: AI agents that answer your business's phone, book jobs, and qualify leads.
+  <a href="agents.html">Visit TechSolutions Agents
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<!-- ── Header ── -->
+<header>
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="FarmTech Solutions home">
+      <svg width="27" height="27" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <g stroke="#2D3B2A" stroke-width="4.5" stroke-linecap="round">
+          <line x1="40" y1="40" x2="20" y2="20"/><line x1="40" y1="40" x2="62" y2="16"/>
+          <line x1="40" y1="40" x2="64" y2="62"/><line x1="40" y1="40" x2="22" y2="60"/>
+        </g>
+        <circle cx="20" cy="20" r="7" fill="#2D3B2A"/><circle cx="62" cy="16" r="7" fill="#2D3B2A"/>
+        <circle cx="64" cy="62" r="7" fill="#2D3B2A"/><circle cx="22" cy="60" r="7" fill="#2D3B2A"/>
+        <circle cx="40" cy="40" r="8.5" fill="#D9A441"/>
+      </svg>
+      FarmTech <em>Solutions</em>
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="gaps.html">The gaps we close</a>
+      <a href="results.html">Results</a>
+      <a href="monitor.html" class="active">What we monitor</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="contact-menu" id="contact-menu">
+        <button type="button" class="btn btn-leaf contact-trigger" id="contact-btn" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" aria-label="Contact us">
+          <svg class="contact-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="contact-label">Contact us</span>
+          <svg class="contact-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="contact-dropdown" id="contact-dropdown" role="menu" aria-label="Contact options">
+          <a role="menuitem" href="tel:+12524203078"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call +1 252 420 3078</a>
+          <a role="menuitem" href="https://wa.me/12524203078" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.26-.1-.45-.15-.65.15-.19.29-.74.94-.9 1.13-.17.19-.34.21-.63.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5h-.56c-.19 0-.5.07-.77.36-.26.29-1 .98-1 2.4 0 1.41 1.03 2.78 1.17 2.97.15.19 2.03 3.09 4.91 4.33.69.3 1.22.47 1.64.61.69.22 1.31.19 1.81.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.56-.34zM12.05 21.5h-.01a9.5 9.5 0 0 1-4.83-1.32l-.35-.21-3.59.94.96-3.5-.23-.36a9.46 9.46 0 0 1-1.45-5.05c0-5.24 4.27-9.5 9.51-9.5 2.54 0 4.92.99 6.72 2.78a9.44 9.44 0 0 1 2.78 6.72c0 5.24-4.27 9.5-9.5 9.5zm5.54-15.04A11.36 11.36 0 0 0 12.05 3C5.76 3 .64 8.12.64 14.41c0 2.02.53 3.99 1.53 5.73L.5 26l5.99-1.57a11.4 11.4 0 0 0 5.55 1.42h.01c6.29 0 11.41-5.12 11.41-11.41 0-3.05-1.19-5.91-3.35-8.06z"/></svg>WhatsApp +1 252 420 3078</a>
+          <a role="menuitem" href="mailto:hello@techsolutionsagents.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>Email hello@techsolutionsagents.com</a>
+          <a role="menuitem" href="index.html#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Send a message</a>
+        </div>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── What we monitor ── -->
+<section class="watch" id="watch">
+  <div class="wrap">
+    <div class="sec-head-center reveal">
+      <span class="sec-kicker">the things that decide your season</span>
+      <h2 class="sec-title">What We Monitor</h2>
+    </div>
+    <div class="watch-grid">
+      <div class="watch-card reveal d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        <h3>Soil moisture &amp; temperature</h3>
+        <p>Probes at root depth report hourly. You irrigate when the soil actually needs it, not on a fixed schedule.</p>
+        <div class="spec">typical probe: buried 20 to 60 cm · reports hourly · sealed IP67 · runs years on lithium cells</div>
+      </div>
+      <div class="watch-card reveal d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+        <h3>Weather &amp; microclimate</h3>
+        <p>Rainfall, humidity, and temperature per plot. Useful for spray timing, frost warnings, and disease-risk windows.</p>
+        <div class="spec">typical station: rain gauge + temp/RH · solar trickle · per-plot, not per-region data</div>
+      </div>
+      <div class="watch-card reveal d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6M12 22v-2M4.93 10.93l1.41 1.41M17.66 12.34l1.41-1.41M2 18h20M7 18a5 5 0 0 1 10 0"/></svg>
+        <h3>Irrigation control</h3>
+        <p>Valves and pumps switched remotely, or automatically when moisture drops below a threshold you set.</p>
+        <div class="spec">latching valve actuators · threshold or manual trigger · your rules, not ours</div>
+      </div>
+      <div class="watch-card reveal d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8l4 10H4L8 2z"/><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/><path d="M12 12v8"/></svg>
+        <h3>Water tanks &amp; pumps</h3>
+        <p>Tank levels, pump running status, and leak detection. Know a pump failed before the crop tells you.</p>
+        <div class="spec">ultrasonic or pressure level sensing · pump current monitoring · low-level SMS alert</div>
+      </div>
+      <div class="watch-card reveal d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <h3>Livestock &amp; asset tracking</h3>
+        <p>Battery-powered GPS tags on animals and equipment, with alerts when something leaves a boundary you draw.</p>
+        <div class="spec">collar or ear-mount tags · geofence alerts · no SIM per animal</div>
+      </div>
+      <div class="watch-card reveal d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h3>Storage &amp; cold rooms</h3>
+        <p>Temperature and humidity in stores and cold rooms, with an SMS the moment conditions drift out of range.</p>
+        <div class="spec">temp/RH loggers · out-of-range SMS within minutes · full history kept for disputes</div>
+      </div>
+    </div>
+    <div class="honesty-inner reveal"><em>A note on honesty:</em> sensors aren't right for every farm. If your plot is small enough to walk in ten minutes and you know your soil by hand, a weather station and a good routine may beat a sensor network, and we'll tell you that at the walkthrough, not after the invoice.</div>
+  </div>
+</section>
+
+<!-- ── Pre-footer CTA band ── -->
+<div class="prefooter">
+  <div class="wrap reveal">
+    <h6>Grow your farm's visibility today</h6>
+    <h2>Stop Guessing When to Irrigate. <em>Begin With a Free Walkthrough.</em></h2>
+    <a href="index.html#contact" class="btn btn-leaf" style="font-size:16px;padding:16px 34px;">Book a free farm walkthrough</a>
+  </div>
+</div>
+<!-- ── Footer ── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo">
+          <svg width="25" height="25" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <g stroke="#D9A441" stroke-width="4.5" stroke-linecap="round">
+              <line x1="40" y1="40" x2="20" y2="20"/><line x1="40" y1="40" x2="62" y2="16"/>
+              <line x1="40" y1="40" x2="64" y2="62"/><line x1="40" y1="40" x2="22" y2="60"/>
+            </g>
+            <circle cx="20" cy="20" r="7" fill="#D9A441"/><circle cx="62" cy="16" r="7" fill="#D9A441"/>
+            <circle cx="64" cy="62" r="7" fill="#D9A441"/><circle cx="22" cy="60" r="7" fill="#D9A441"/>
+            <circle cx="40" cy="40" r="8.5" fill="#F5F1E8"/>
+          </svg>
+          FarmTech <em>Solutions</em>
+        </div>
+        <p class="blurb">LoRaWAN sensor networks for farms: soil, water, livestock, and storage, readable from your phone. Scoped honestly, installed properly, supported by people you can reach.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Quick nav</h3>
+        <a href="index.html">Home</a>
+        <a href="gaps.html">The gaps we close</a>
+        <a href="results.html">Results</a>
+        <a href="monitor.html">What we monitor</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h3>Solutions</h3>
+        <a href="monitor.html">Soil &amp; irrigation</a>
+        <a href="monitor.html">Tanks &amp; pumps</a>
+        <a href="monitor.html">Livestock tracking</a>
+        <a href="monitor.html">Storage &amp; cold rooms</a>
+      </div>
+      <div class="foot-col">
+        <h3>Resources</h3>
+        <a href="agents.html">TechSolutions Agents: AI for business</a>
+        <a href="https://lora-alliance.org/" target="_blank" rel="noopener">LoRa Alliance</a>
+        <a href="https://www.ibm.com/think/topics/smart-farming" target="_blank" rel="noopener">What is smart farming?</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="mailto:hello@techsolutionsagents.com">hello@techsolutionsagents.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 FarmTech Solutions. All rights reserved.</span>
+      <span>Farmer photos: <a href="https://www.flickr.com/photo.gne?id=22436376226" target="_blank" rel="noopener">sicrump</a> (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>)</span>
+      <span>Built on the open LoRaWAN standard.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
