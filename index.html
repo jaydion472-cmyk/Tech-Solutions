@@ -146,7 +146,7 @@ nav a:hover,nav a.active{color:var(--leaf);}
   pointer-events:none;
 }
 .hc-slide.active{opacity:1;pointer-events:auto;}
-.hc-slide img{
+.hc-slide img,.hc-slide video{
   position:absolute;inset:0;width:100%;height:100%;
   object-fit:cover;
 }
@@ -689,7 +689,10 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
 <!-- ── Hero carousel ── -->
 <div class="hero-carousel" id="hero-carousel">
   <div class="hc-slide active">
-    <img src="https://live.staticflickr.com/566/22436376226_8779dceb29_b.jpg" alt="A woman farmer standing in her maize field" loading="eager">
+    <video autoplay muted loop playsinline poster="assets/hero-farm-poster.jpg" aria-label="Aerial drone view of smallholder vegetable plots between farm buildings and trees">
+      <source src="assets/hero-farm.mp4" type="video/mp4">
+      <img src="assets/hero-farm-poster.jpg" alt="Aerial drone view of smallholder vegetable plots between farm buildings and trees">
+    </video>
     <div class="hc-content">
       <div class="wrap">
         <div class="hc-kicker">LoRaWAN farm monitoring</div>
@@ -1209,12 +1212,19 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
   var cur=0,timer=null;
   function goTo(i){
     cur=(i+slides.length)%slides.length;
-    slides.forEach(function(s,idx){s.classList.toggle('active',idx===cur);});
+    slides.forEach(function(s,idx){
+      s.classList.toggle('active',idx===cur);
+      var v=s.querySelector('video');
+      if(v){if(idx===cur){v.currentTime=0;v.play().catch(function(){});}else{v.pause();}}
+    });
     dots.forEach(function(d,idx){d.classList.toggle('active',idx===cur);});
   }
   function resetTimer(){
-    if(timer)clearInterval(timer);
-    timer=setInterval(function(){goTo(cur+1);},4800);
+    if(timer)clearTimeout(timer);
+    (function tick(){
+      var dwell=slides[cur].querySelector('video')?9600:4800;
+      timer=setTimeout(function(){goTo(cur+1);tick();},dwell);
+    })();
   }
   if(slides.length){
     dots.forEach(function(d){d.addEventListener('click',function(){goTo(parseInt(d.dataset.slide,10));resetTimer();});});
@@ -1222,7 +1232,11 @@ footer .blurb{color:rgba(245,241,232,0.45);font-size:14px;max-width:300px;line-h
     if(prevB)prevB.addEventListener('click',function(){goTo(cur-1);resetTimer();});
     if(nextB)nextB.addEventListener('click',function(){goTo(cur+1);resetTimer();});
     var reduceMotionC=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-    if(!reduceMotionC)resetTimer();
+    if(reduceMotionC){
+      slides.forEach(function(s){var v=s.querySelector('video');if(v){v.removeAttribute('autoplay');v.pause();}});
+    }else{
+      resetTimer();
+    }
   }
 
   // ── Vertical photo sliders ──
