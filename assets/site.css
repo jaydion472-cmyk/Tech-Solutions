@@ -241,12 +241,12 @@ h2.sec-title em{font-style:normal;color:var(--soil);}
 .photo img{width:100%;height:100%;object-fit:cover;display:block;}
 /* ── Vertical image slider (mid-page photos cycle upward, like the hero cycles across) ── */
 .vslide{position:relative;overflow:hidden;}
-.vslide img{
+.vslide img,.vslide video{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   transform:translateY(100%);
   transition:transform .85s cubic-bezier(.22,.61,.36,1);
 }
-.vslide img:first-child{transform:none;}
+.vslide img:first-child,.vslide video:first-child{transform:none;}
 .gaps-visual .dcard{
   margin-top:-44px;margin-left:28px;position:relative;z-index:2;
   background:var(--bg);
@@ -412,7 +412,7 @@ h2.sec-title em{font-style:normal;color:var(--soil);}
   overflow:hidden;background:#FDFBF6;
 }
 .story-img{position:relative;min-height:320px;}
-.story-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.story-img img,.story-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .story-body{padding:46px 44px;display:flex;flex-direction:column;align-items:flex-start;}
 .story-tag{
   font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
@@ -483,7 +483,7 @@ h2.sec-title em{font-style:normal;color:var(--soil);}
   border:1px solid var(--border-dark);
   aspect-ratio:16/10;margin-bottom:26px;max-width:430px;
 }
-.cta-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.cta-photo img,.cta-photo video{width:100%;height:100%;object-fit:cover;display:block;}
 .contact-note{color:rgba(245,241,232,0.6);font-size:14.5px;line-height:1.8;max-width:380px;}
 .cta-badges{margin-top:26px;display:flex;flex-direction:column;gap:10px;}
 .cta-badge{
